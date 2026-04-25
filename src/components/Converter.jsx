@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { formatNumber } from "../utils/formatNumber";
 import { convertLength } from "../converters/length";
+import { useTranslation } from "react-i18next";
+import i18n from '../i18n'
 
 function Converter({ units, title }) {
     const unitKeys = Object.keys(units)
+    const { t } = useTranslation()
 
     const [value, setValue] = useState(1)
     const [from, setFrom] = useState(unitKeys[0])
@@ -28,7 +31,7 @@ function Converter({ units, title }) {
             <select value={from} onChange={(e) => setFrom(e.target.value)}>
                 {unitKeys.map((unit) => (
                     <option key={unit} value={unit}>
-                        {units[unit].name}
+                        {t(units[unit].name)}
                     </option>
                 ))}
             </select>
@@ -41,7 +44,7 @@ function Converter({ units, title }) {
             <select value={to} onChange={(e) => setTo(e.target.value)}>
                 {unitKeys.map((unit) => (
                     <option key={unit} value={unit}>
-                        {units[unit].name}
+                        {t(units[unit].name)}
                     </option>
                 ))}
             </select>
@@ -63,7 +66,7 @@ function Converter({ units, title }) {
                                 onClick={() => {if (unit !== to) setTo(unit)}}
                             >
                                 <td>{formatNumber(converted)} {units[unit].symbol}</td>
-                                <td>{units[unit].name}</td>
+                                <td>{t(units[unit].name)}</td>
                             </tr>
                         )
                     })}

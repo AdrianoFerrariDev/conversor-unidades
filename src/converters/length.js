@@ -1,10 +1,10 @@
 export const units = {
-    metro: {factor: 1, symbol: 'm', name: 'Metro'},
-    quilometro: {factor: 1000, symbol: 'km', name: 'Quilômetro'},
-    decimetro: { factor: 0.1, symbol: 'dm', name: 'Decímetro'},
-    centimetro: {factor: 0.01, symbol: 'cm', name: 'Centímetro'},
-    milimetro: {factor: 0.001, symbol: 'mm', name: 'Milímetro'},
-    milha: {factor: 1609.34, symbol: 'mi', name: 'Milha'},
+    metro: {factor: 1, symbol: 'm', name: 'units.meter'},
+    quilometro: {factor: 1000, symbol: 'km', name: 'units.kilometer'},
+    decimetro: { factor: 0.1, symbol: 'dm', name: 'units.decimeter'},
+    centimetro: {factor: 0.01, symbol: 'cm', name: 'units.centimeter'},
+    milimetro: {factor: 0.001, symbol: 'mm', name: 'units.milimeter'},
+    milha: {factor: 1609.34, symbol: 'mi', name: 'units.mile'},
 };
 
 export function convertLength(value, from, to){

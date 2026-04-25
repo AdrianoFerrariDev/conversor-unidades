@@ -9,6 +9,10 @@ import Mass from "./pages/Mass";
 import Speed from "./pages/Speed";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LanguageSync from "./components/LanguageSync";
+import { routes } from "./routes";
+
+const langRoutes = routes.pt; // só para mapear estrutura
 
 function App() {  
   return (
@@ -17,12 +21,39 @@ function App() {
         <Header />
         <main className="container">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/comprimento" element={<Length />} />
-            <Route path="/area" element={<Area />} />
-            <Route path="/volume" element={<Volume />} />
-            <Route path="/massa" element={<Mass />} />
-            <Route path="/velocidade" element={<Speed />} />
+            <Route path="/:lang" element={<LanguageSync />}>
+              <Route path="*" element={<Home />} />
+              {Object.keys(routes.pt).map((key) => (
+                <Route
+                  key={key}
+                  path={routes.pt[key]}
+                  element={
+                    key === 'length' ? <Length /> :
+                    key === 'area' ? <Area /> :
+                    key === 'volume' ? <Volume /> :
+                    key === 'mass' ? <Mass /> :
+                    key === 'speed' ? <Speed /> :
+                    null
+                  }
+                />
+              ))}
+
+              {Object.keys(routes.en).map((key) => (
+                <Route
+                  key={`en-${key}`}
+                  path={routes.en[key]}
+                  element={
+                    key === 'length' ? <Length /> :
+                    key === 'area' ? <Area /> :
+                    key === 'volume' ? <Volume /> :
+                    key === 'mass' ? <Mass /> :
+                    key === 'speed' ? <Speed /> :
+                    null
+                  }
+                />
+              ))}
+              
+            </Route>
           </Routes>
         </main>
         <Footer />

@@ -1,0 +1,18 @@
+{
+  "title": "Unit Converter",
+  "length": "Length",
+  "area": "Area",
+  "volume": "Volume",
+  "mass": "Mass",
+  "speed": "Speed",
+  "result": "Result",
+  "invert": "Invert",
+  "units" : {
+    "meter": "Meter",
+    "kilometer": "Kilometer",
+    "decimeter": "Decimeter",
+    "centimeter": "Centimeter",
+    "milimeter": "Milimeter",
+    "mile": "Mile"
+  }
+}
