@@ -1,7 +1,12 @@
+import Converter from "../components/Converter";
+import { unitsVolume } from "../converters/volume";
 function Volume() {
     return (
-        <div></div>
+        <Converter 
+            title="Conversor de Volume"
+            units={unitsVolume}
+        />
     );
 }
 
-export default Volume;
+export default Volume

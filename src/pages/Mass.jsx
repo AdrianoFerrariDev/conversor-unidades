@@ -1,6 +1,12 @@
+import Converter from "../components/Converter";
+import { unitsMass } from "../converters/mass";
+
 function Mass() {
     return(
-        <div></div>
+        <Converter
+            title="Conversor de Massa"
+            units={unitsMass}
+        />        
     );
 }
 

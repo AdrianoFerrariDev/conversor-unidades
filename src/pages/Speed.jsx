@@ -1,6 +1,12 @@
+import Converter from "../components/Converter";
+import { unitsSpeed } from "../converters/speed";
+
 function Speed() {
     return (
-        <div></div>
+        <Converter 
+            title="Conversor de Velocidade"
+            units={unitsSpeed}
+        />
     );
 }
 

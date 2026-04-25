@@ -55,7 +55,7 @@ function Converter({ units, title }) {
                 </thead>
                 <tbody>
                     {unitKeys.map((unit) => {
-                        const converted = convertLength(Number(value), from, unit)
+                        const converted = convert(Number(value), from, unit)
                         return(
                             <tr
                                 key={unit}
