@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { convertLength } from "../converters/length";
-import { formatNumber } from "../converters/length";
+import { formatNumber } from "../utils/formatNumber";
 import { units } from "../converters/length";
 
 function Length() {
