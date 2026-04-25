@@ -96,6 +96,27 @@ table {
   width: 100%;
 }
 
+.table-row {
+  transition: background 0.2s;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background: #f1f5f9;
+}
+
+.clickable:hover:not(.active-row) {
+  background: #f1f5f9;
+}
+
+.active-row {
+  background: #dbeafe;
+  font-weight: bold;
+}
+
 td, th {
   border: 1px solid #ccc;
   padding: 8px;
