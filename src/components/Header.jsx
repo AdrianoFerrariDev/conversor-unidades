@@ -17,7 +17,7 @@ function Header() {
             <div className="container">
                 <h1>{t('title')}</h1>
                 <nav>
-                    <Link to="/">Home</Link>
+                    <Link to={`/${lang}`}>Home</Link>
                     <Link to={`/${lang}/${routes[lang].length}`}>{t('length')}</Link>
                     <Link to={`/${lang}/${routes[lang].area}`}>{(t('area'))}</Link>
                     <Link to={`/${lang}/${routes[lang].volume}`}>{t('volume')}</Link>

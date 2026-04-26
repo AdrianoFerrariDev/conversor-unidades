@@ -8,24 +8,36 @@ export function useLanguageNavigation() {
   const location = useLocation();
 
   function changeLanguage(newLang) {
-    const currentPath = location.pathname;
-
-    const lang = currentLang || 'pt';
+    const lang = currentLang?.slice(0, 2) || 'pt';
 
     // remove idioma da URL
-    const pathWithoutLang = currentPath.replace(/^\/(pt|en)/, '');
+    const pathWithoutLang = location.pathname.replace(/^\/(pt|en)/, '');
 
-    const routeMap = routes[lang];
+    const cleanPath = pathWithoutLang.replace(/^\//, '')
 
-    // descobre qual página atual
-    let pageKey = Object.keys(routeMap).find(
-      key => routeMap[key] === pathWithoutLang.replace('/', '')
-    );
+    // 🔥 IMPORTANTE: procurar em TODOS os idiomas
+    let pageKey = null;
 
-    // fallback
-    if (!pageKey) pageKey = 'length';
+    for (const l of Object.keys(routes)) {
+      const foundKey = Object.keys(routes[l]).find(
+        key => routes[l][key] === cleanPath
+      );
+
+      if (foundKey) {
+        pageKey = foundKey;
+        break;
+      }
+    }
+
+    // fallback seguro
+    if (!pageKey) {
+        pageKey = cleanPath === '' ? 'home' : 'length';
+    }
 
     const newPath = `/${newLang}/${routes[newLang][pageKey]}`;
+
+    // evita navegação desnecessária
+    if (location.pathname === newPath) return;
 
     i18n.changeLanguage(newLang);
     localStorage.setItem('lang', newLang);

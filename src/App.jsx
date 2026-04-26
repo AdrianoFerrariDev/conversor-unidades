@@ -11,16 +11,28 @@ import Speed from "./pages/Speed";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LanguageSync from "./components/LanguageSync";
 import { routes } from "./routes";
+import { Navigate } from "react-router-dom";
 
-const langRoutes = routes.pt; // só para mapear estrutura
 
-function App() {  
+
+function App() {
+  const langRoutes = routes.pt; // só para mapear estrutura
+  const getInitialLang = () => {
+    const saved = localStorage.getItem('lang')
+    if (saved) return saved
+
+    const browserLang = navigator.language.slice(0,2)
+
+    return ['pt', 'en'].includes(browserLang) ? browserLang : 'pt'
+  }
+
   return (
     <BrowserRouter>
       <div className="layout">
         <Header />
         <main className="container">
           <Routes>
+            <Route path="/" element={<Navigate to={`/${getInitialLang()}`} replace />} />
             <Route path="/:lang" element={<LanguageSync />}>
               <Route path="*" element={<Home />} />
               {Object.keys(routes.pt).map((key) => (
