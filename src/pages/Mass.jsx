@@ -1,10 +1,12 @@
 import Converter from "../components/Converter";
 import { unitsMass } from "../converters/mass";
+import { useTranslation } from "react-i18next";
 
 function Mass() {
+    const { t } = useTranslation()
     return(
         <Converter
-            title="Conversor de Massa"
+            title={t('massConv')}
             units={unitsMass}
         />        
     );

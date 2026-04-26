@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { formatNumber } from "../utils/formatNumber";
-import { convertLength } from "../converters/length";
 import { useTranslation } from "react-i18next";
-import i18n from '../i18n'
 
 function Converter({ units, title }) {
     const unitKeys = Object.keys(units)
@@ -25,6 +23,7 @@ function Converter({ units, title }) {
             <input
                 type="number"
                 value={value}
+                autoFocus
                 onChange={(e) => setValue(e.target.value)}
             />
 
@@ -52,8 +51,8 @@ function Converter({ units, title }) {
             <table>
                 <thead>
                     <tr>
-                        <td>Valor</td>
-                        <td>Unidade</td>
+                        <td>{t('value')}</td>
+                        <td>{t('unity')}</td>
                     </tr>
                 </thead>
                 <tbody>

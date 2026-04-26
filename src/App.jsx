@@ -34,7 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to={`/${getInitialLang()}`} replace />} />
             <Route path="/:lang" element={<LanguageSync />}>
-              <Route path="*" element={<Home />} />
+              <Route path="" element={<Home />} />
               {Object.keys(routes.pt).map((key) => (
                 <Route
                   key={key}

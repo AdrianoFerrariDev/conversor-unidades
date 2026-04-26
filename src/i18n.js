@@ -13,8 +13,8 @@ i18n
       pt: { translation: pt },
       en: { translation: en },
     },
-    lng: savedLang || navigator.language.slice(0,2) || 'pt',
-    fallbackLng: 'en',
+    lng: savedLang || navigator.language.slice(0,2) || 'en',
+    fallbackLng: 'pt',
     interpolation: {
       escapeValue: false,
     },

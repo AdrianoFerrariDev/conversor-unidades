@@ -5,7 +5,7 @@ export function formatNumber(num) {
     
     // Muito pequeno ou muito grande → exponencial
     if( abs < 0.000001 || abs >= 1e9 ) {
-        return num.toExponential(4);
+        return num.toExponential(0);
     }
 
     // Até 6 casas decimais, removendo zeros desnecessários
