@@ -1,5 +1,5 @@
 import Converter from "../components/Converter";
-import { unitsArea } from "../converters/area";
+import { units, unitSystem } from '../converters/length'
 import { useTranslation } from "react-i18next";
 
 function Area() {
@@ -8,7 +8,8 @@ function Area() {
     return (
         <Converter 
             title={t('areaConv')}
-            units={unitsArea}
+            unitSystem={unitSystem}
+            units={units}
         />
     );
 }

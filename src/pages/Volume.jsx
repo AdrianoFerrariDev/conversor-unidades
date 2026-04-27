@@ -1,5 +1,5 @@
 import Converter from "../components/Converter";
-import { unitsVolume } from "../converters/volume";
+import { units, unitSystem } from '../converters/length'
 import { useTranslation } from "react-i18next";
 
 
@@ -8,7 +8,8 @@ function Volume() {
     return (
         <Converter 
             title={t('volumeConv')}
-            units={unitsVolume}
+            unitSystem={unitSystem}
+            units={units}
         />
     );
 }

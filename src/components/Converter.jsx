@@ -2,7 +2,7 @@ import { useState } from "react";
 import { formatNumber } from "../utils/formatNumber";
 import { useTranslation } from "react-i18next";
 
-function Converter({ units, title }) {
+function Converter({ units, unitSystem, title }) {
     const unitKeys = Object.keys(units)
     const { t } = useTranslation()
 
@@ -28,10 +28,14 @@ function Converter({ units, title }) {
             />
 
             <select value={from} onChange={(e) => setFrom(e.target.value)}>
-                {unitKeys.map((unit) => (
-                    <option key={unit} value={unit}>
-                        {t(units[unit].name)}
-                    </option>
+                {Object.entries(unitSystem).map(([systemKey,system]) => (
+                    <optgroup key={systemKey} label={t(system.name)}>
+                        {Object.entries(system.units).map(([unitKey, unit]) => (
+                            <option key={unitKey} value={unitKey}>
+                                {t(unit.name)} ({unit.symbol})
+                            </option>
+                        ))}
+                    </optgroup>
                 ))}
             </select>
             <button onClick={() => {
@@ -41,10 +45,14 @@ function Converter({ units, title }) {
                 Inverter
             </button>
             <select value={to} onChange={(e) => setTo(e.target.value)}>
-                {unitKeys.map((unit) => (
-                    <option key={unit} value={unit}>
-                        {t(units[unit].name)}
-                    </option>
+                {Object.entries(unitSystem).map(([systemKey,system]) => (
+                    <optgroup key={systemKey} label={t(system.name)}>
+                        {Object.entries(system.units).map(([unitKey, unit]) => (
+                            <option key={unitKey} value={unitKey}>
+                                {t(unit.name)} ({unit.symbol})
+                            </option>
+                        ))}
+                    </optgroup>
                 ))}
             </select>
             <p>Resultado {result} {units[to].symbol}</p>

@@ -1,5 +1,5 @@
 import Converter from "../components/Converter";
-import { unitsSpeed } from "../converters/speed";
+import { units, unitSystem } from '../converters/length'
 import { useTranslation } from "react-i18next";
 
 function Speed() {
@@ -7,7 +7,8 @@ function Speed() {
     return (
         <Converter 
             title={t("speedConv")}
-            units={unitsSpeed}
+            unitSystem={unitSystem}
+            units={units}
         />
     );
 }

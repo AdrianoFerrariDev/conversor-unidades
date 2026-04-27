@@ -1,5 +1,5 @@
 import Converter from "../components/Converter";
-import { unitsMass } from "../converters/mass";
+import { units, unitSystem } from '../converters/length'
 import { useTranslation } from "react-i18next";
 
 function Mass() {
@@ -7,7 +7,8 @@ function Mass() {
     return(
         <Converter
             title={t('massConv')}
-            units={unitsMass}
+            unitSystem={unitSystem}
+            units={units}
         />        
     );
 }

@@ -1,5 +1,5 @@
 import Converter from "../components/Converter"
-import { units } from "../converters/length"
+import { units, unitSystem } from '../converters/length'
 import { useTranslation } from "react-i18next";
 
 function Length() {
@@ -8,6 +8,7 @@ function Length() {
     return (
         <Converter
             title={t('lengthConv')}
+            unitSystem={unitSystem}
             units={units}
         />
         
