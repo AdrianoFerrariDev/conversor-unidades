@@ -1,6 +1,6 @@
 import { createUnitSystem } from "../utils/createUnitSystem";
 
-export const lengthSystem = {
+const lengthSystem = {
     metric: { name: "Métrico", units: {
             metro: {factor: 1, symbol: 'm', name: 'units.meter'},
             quilometro: {factor: 1000, symbol: 'km', name: 'units.kilometer'},
