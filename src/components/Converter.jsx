@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 function Converter({ units, unitSystem, title }) {
     const unitKeys = Object.keys(units)
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
 
     const [value, setValue] = useState(1)
     const [from, setFrom] = useState(unitKeys[0])
@@ -15,7 +15,16 @@ function Converter({ units, unitSystem, title }) {
         return base / units[to].factor
     }
 
-    const result = formatNumber(convert(Number(value), from, to))
+    function getLang(i18n) {
+    return ['pt', 'en'].includes(i18n.language?.slice(0, 2))
+        ? i18n.language.slice(0, 2)
+        : 'pt'
+    }
+
+    const result = formatNumber(
+        convert(Number(value), from, to),
+        getLang(i18n)
+    )
 
     return (
         <>
@@ -55,31 +64,43 @@ function Converter({ units, unitSystem, title }) {
                     </optgroup>
                 ))}
             </select>
+            
             <p>Resultado {result} {units[to].symbol}</p>
-            <table>
-                <thead>
-                    <tr>
-                        <td>{t('value')}</td>
-                        <td>{t('unity')}</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {unitKeys.map((unit) => {
-                        const converted = convert(Number(value), from, unit)
-                        return(
-                            <tr
-                                key={unit}
-                                className={`table-row ${unit ===to ? 'active-row' : ''} clickable`}
-                                onClick={() => {if (unit !== to) setTo(unit)}}
-                            >
-                                <td>{formatNumber(converted)} {units[unit].symbol}</td>
-                                <td>{t(units[unit].name)}</td>
+            {Object.entries(unitSystem).map(([systemKey, system]) => (
+                <div key={systemKey} className="table-group">
+                    <h3 className={units[to].system === systemKey ? 'active-system' : ''}>{t(unitSystem[systemKey].name)}</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>{t('value')}</td>
+                                <td>{t('unity')}</td>
                             </tr>
-                        )
-                    })}
-                    
-                </tbody>
-            </table>
+                        </thead>
+                        <tbody>
+                            {Object.entries(system.units).map(([unitKey, unit]) => {
+                                    const converted = convert(Number(value),from, unitKey)
+
+                                    return (
+                                        <tr
+                                            key={unitKey}
+                                            className={`table-row ${unitKey === to ? 'active-row' : ''} clickable`}
+                                            onClick={() => {
+                                                if(unitKey !== to) setTo(unitKey)
+                                            }}
+                                        >
+                                            <td>
+                                                {formatNumber(converted, i18n.language?.slice(0, 2))} {unit.symbol}
+                                            </td>
+                                            <td>{t(unit.name)}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            ))}
+            
         </>
     )
 }
