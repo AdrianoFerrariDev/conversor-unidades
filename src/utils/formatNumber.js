@@ -12,6 +12,8 @@ const superscriptMap = {
     '-': '⁻',
 }
 
+const SPACE = '\u202F'
+
 function toSuperscript(num) {
     return num
         .toString()
@@ -24,21 +26,26 @@ export function formatNumber(value, lang = 'pt') {
     if (!isFinite(value)) return ''
 
     const abs = Math.abs(value)
+
+    const formatter = new Intl.NumberFormat(lang === 'pt' ? 'pt-Br' : 'en-US', {
+            maximumFractionDigits: 6,
+        })
     
     // Muito pequeno ou muito grande → exponencial
     if( abs !== 0 && (abs < 0.000001 || abs >= 1e9 )) {
         const exp = value.toExponential(2)
         const [base, expoent] = exp.split('e')
 
-        const cleanBase = Number(base) !== 1 ? `${Number(base)} x` : ''
+        const cleanBaseNumber = Number(base)
+
+        const formattedBase = cleanBaseNumber !== 1 ? formatter.format(cleanBaseNumber) : ''
+
         const cleanExp = expoent.replace('+', '')
 
-        return `${cleanBase} 10${toSuperscript(cleanExp)}`
+        return formattedBase ? `${formattedBase}${SPACE}x${SPACE}10${toSuperscript(cleanExp)}` : `10${toSuperscript(cleanExp)}`
     }
 
-    return new Intl.NumberFormat( lang === 'pt' ? 'pt-BR' : 'en-US', {
-        maximumFractionDigits: 6,
-    }).format(value)
+    return formatter.format(value)
 
     /*// Até 6 casas decimais, removendo zeros desnecessários
     const formatted = Number(num.toFixed(6));

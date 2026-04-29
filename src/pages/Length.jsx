@@ -7,7 +7,7 @@ function Length() {
 
     return (
         <Converter
-            title={t('lengthConv')}
+            title={t('pageTitle.lengthConv')}
             unitSystem={unitSystem}
             units={units}
         />

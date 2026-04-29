@@ -7,7 +7,7 @@ function Area() {
     
     return (
         <Converter 
-            title={t('areaConv')}
+            title={t('pageTitle.areaConv')}
             unitSystem={unitSystem}
             units={units}
         />

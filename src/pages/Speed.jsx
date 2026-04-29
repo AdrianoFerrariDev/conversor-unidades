@@ -6,7 +6,7 @@ function Speed() {
     const { t } = useTranslation()
     return (
         <Converter 
-            title={t("speedConv")}
+            title={t("pageTitle.speedConv")}
             unitSystem={unitSystem}
             units={units}
         />

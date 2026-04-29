@@ -6,7 +6,7 @@ function Mass() {
     const { t } = useTranslation()
     return(
         <Converter
-            title={t('massConv')}
+            title={t('pageTitle.massConv')}
             unitSystem={unitSystem}
             units={units}
         />        

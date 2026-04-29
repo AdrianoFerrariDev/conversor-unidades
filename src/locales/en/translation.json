@@ -5,22 +5,27 @@
   "volume": "Volume",
   "mass": "Mass",
   "speed": "Speed",
-  "lengthConv": "Lenght Converter",
-  "areaConv": "Area Converter",
-  "volumeConv": "Volume Converter",
-  "massConv": "Mass Converter",
-  "speedConv": "Speed Converter",
+  "pageTitle": {
+    "lengthConv": "Lenght Converter",
+    "areaConv": "Area Converter",
+    "volumeConv": "Volume Converter",
+    "massConv": "Mass Converter",
+    "speedConv": "Speed Converter"
+  },
   "result": "Result",
   "invert": "Invert",
   "value": "Value",
   "unity": "Unity",
-  "units" : {
-    "meter": "Meter",
+  "metricSystem": {
     "kilometer": "Kilometer",
+    "hectometer": "Hectometer",
+    "decameter": "Decameter",
+    "meter": "Meter",
     "decimeter": "Decimeter",
     "centimeter": "Centimeter",
     "millimeter": "Millimeter",
-    "mile": "Mile",
+    "micrometer": "Micrometer",
+    "nanometer": "Nanometer",
     "sqmeter": "Square Meter",
     "sqkilometer": "Square Kilometer",
     "sqdecimeter": "Square Decimeter",
@@ -35,6 +40,19 @@
     "kilogram": "Kilogram",
     "decigram": "Decigram",
     "centigram": "Centigram",
-    "milligram": "Miligram"
+    "milligram": "Miligram",
+    "metersec": "Meter per Second",
+    "kilometersec": "Kilometer per Second",
+    "kilometerhour": "Kilometer per Hour"
+  },
+  "imperialSystem": {
+    "mile": "Mile",
+    "inch": "Inch"
+  },
+  "nauticSystem": {
+    "nauticMile" : "Nautic Mile"
+  },
+  "astronomicSystem": {
+    "parsec": "Parsec"
   }
 }

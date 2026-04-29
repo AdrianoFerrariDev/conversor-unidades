@@ -7,7 +7,7 @@ function Volume() {
     const { t } = useTranslation()
     return (
         <Converter 
-            title={t('volumeConv')}
+            title={t('pageTitle.volumeConv')}
             unitSystem={unitSystem}
             units={units}
         />
