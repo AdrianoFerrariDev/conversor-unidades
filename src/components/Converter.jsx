@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { formatNumber } from "../utils/formatNumber";
 import { useTranslation } from "react-i18next";
+import { ArrowLeftRight } from "lucide-react";
 
 function Converter({ units, unitSystem, title }) {
     const unitKeys = Object.keys(units)
@@ -50,8 +51,10 @@ function Converter({ units, unitSystem, title }) {
             <button onClick={() => {
                 setFrom(to)
                 setTo(from)
-            }}>
-                Inverter
+            }}
+                aria-label="Inverter unidades"
+            >
+                <ArrowLeftRight size={20} />
             </button>
             <select value={to} onChange={(e) => setTo(e.target.value)}>
                 {Object.entries(unitSystem).map(([systemKey,system]) => (
