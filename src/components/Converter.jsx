@@ -65,7 +65,7 @@ function Converter({ units, unitSystem, title }) {
                 ))}
             </select>
             
-            <p>Resultado {result} {units[to].symbol}</p>
+            <p>Resultado: {value} {units[from].symbol} = {result} {units[to].symbol}</p>
             {Object.entries(unitSystem).map(([systemKey, system]) => (
                 <div key={systemKey} className="table-group">
                     <h3 className={units[to].system === systemKey ? 'active-system' : ''}>{t(unitSystem[systemKey].name)}</h3>
