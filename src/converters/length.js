@@ -14,8 +14,15 @@ const lengthSystem = {
         },
     },
     imperial: { name: "Imperial", units: {
-            milha: {factor: 1609.34, symbol: 'mi', name: 'imperialSystem.mile'},
-            polegada: { factor: 0.0254, symbol: "in", name: 'imperialSystem.inch'}
+            milha: {factor: 1609.344, symbol: 'mi', name: 'imperialSystem.mile'},
+            furlong: { factor: 201.168, symbol: "fur", name: 'imperialSystem.furlong'},
+            corrente: { factor: 20.1168, symbol: "ch", name: 'imperialSystem.chain'},
+            barra: { factor: 5.0292, symbol: "rd", name: 'imperialSystem.rod'},
+            jarda: { factor: 0.9144, symbol: "yd", name: 'imperialSystem.yard'},
+            pe: { factor: 0.3048, symbol: "ft", name: 'imperialSystem.foot'},
+            link: { factor: 0.201168, symbol: "li", name: 'imperialSystem.link'},
+            polegada: { factor: 0.0254, symbol: "in", name: 'imperialSystem.inch'},
+            mil: { factor: 0.0000254, symbol: "mil", name: 'imperialSystem.mil'},
         },
     }
 }

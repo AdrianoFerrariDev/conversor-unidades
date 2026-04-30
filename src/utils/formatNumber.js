@@ -28,12 +28,12 @@ export function formatNumber(value, lang = 'pt') {
     const abs = Math.abs(value)
 
     const formatter = new Intl.NumberFormat(lang === 'pt' ? 'pt-Br' : 'en-US', {
-            maximumFractionDigits: 6,
+            maximumFractionDigits: 19,
         })
     
     // Muito pequeno ou muito grande → exponencial
     if( abs !== 0 && (abs < 0.000001 || abs >= 1e9 )) {
-        const exp = value.toExponential(2)
+        const exp = value.toExponential(10)
         const [base, expoent] = exp.split('e')
 
         const cleanBaseNumber = Number(base)
