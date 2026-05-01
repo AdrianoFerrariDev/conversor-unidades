@@ -5,6 +5,7 @@ import i18n from '../i18n'
 import { routes } from "../routes";
 import { useLanguageNavigation } from "../hooks/useLanguageNavigation";
 import { Sun, Moon } from "lucide-react";
+import { langList } from "../utils/langList";
 
 function Header() {
     const { t } = useTranslation()
@@ -32,25 +33,40 @@ function Header() {
 
     return (
         <header>
-            <div className="container">
-                <h1>{t('title')}</h1>
-                <p>Rápido, preciso e gratuíto</p>
-                <button
-                    className="theme-toogle"
-                    onClick={() => setTheme(theme === 'light' ? "dark" : "light")}
-                >
-                    {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
-                </button>
-                <nav>
-                    <Link to={`/${lang}`}>Home</Link>
-                    <Link to={`/${lang}/${routes[lang].length}`}>{t('length')}</Link>
-                    <Link to={`/${lang}/${routes[lang].area}`}>{(t('area'))}</Link>
-                    <Link to={`/${lang}/${routes[lang].volume}`}>{t('volume')}</Link>
-                    <Link to={`/${lang}/${routes[lang].mass}`}>{t('mass')}</Link>
-                    <Link to={`/${lang}/${routes[lang].speed}`}>{t('speed')}</Link>
-                </nav>
-                <button onClick={() => changeLanguage('pt')}>PT</button>
-                <button onClick={() => changeLanguage('en')}>EN</button>
+            <div className="container header-container">
+                <div>
+                    <h1>{t('title')}</h1>
+                    <p>Rápido, preciso e gratuíto</p>
+                </div>
+                    <div className="menu">
+                        <nav>
+                            <Link to={`/${lang}`}>Home</Link>
+                            <Link to={`/${lang}/${routes[lang].length}`}>{t('length')}</Link>
+                            <Link to={`/${lang}/${routes[lang].area}`}>{(t('area'))}</Link>
+                            <Link to={`/${lang}/${routes[lang].volume}`}>{t('volume')}</Link>
+                            <Link to={`/${lang}/${routes[lang].mass}`}>{t('mass')}</Link>
+                            <Link to={`/${lang}/${routes[lang].speed}`}>{t('speed')}</Link>
+                        </nav>
+                        <div className="change-lang">
+                            <select className="select-lang" onChange={(e) => changeLanguage(e.target.value)}>
+                                {Object.entries(langList).map(([keyLang, langName]) => (
+                                <option key={keyLang} value={keyLang}>{langName}</option>   
+                                ))}
+                            </select>
+                        </div>
+                    </div>
+                    <div className="lang-buttons">
+                        <button onClick={() => changeLanguage('pt')}>PT</button>
+                        <button onClick={() => changeLanguage('en')}>EN</button>
+                    </div>
+                    <div className="mode-buttons">
+                        <button
+                            className="theme-toggle"
+                            onClick={() => setTheme(theme === 'light' ? "dark" : "light")}
+                        >
+                            {theme === "light" ? <Moon size={22} /> : <Sun size={22} />}
+                        </button>
+                    </div>
             </div>
         </header>
     );
