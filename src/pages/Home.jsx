@@ -36,6 +36,7 @@ function Home() {
             ))}
           </select>
           <button
+            className="swap-btn"
             onClick={() => {
               setFrom(to);
               setTo(from);
