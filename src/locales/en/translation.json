@@ -33,6 +33,8 @@
     "sqdecimeter": "Square Decimeter",
     "sqcentimeter": "Square Centimeter",
     "sqmillimeter": "Square Millimeter",
+    "sqmicrometer": "Square Micrometer",
+    "sqnanometer": "Square Nanometer",
     "cbkilometer": "Cubic Kilometer",
     "cbmeter": "Cubic Meter",
     "cbdecimeter": "Cubic Decimeter",
@@ -41,7 +43,8 @@
     "liter": "Liter",
     "deciliter": "Deciliter",
     "centiliter": "Centiliter",
-    "milliliter": "Milliliter", 
+    "milliliter": "Milliliter",
+    "ton": "Ton",
     "kilogram": "Kilogram",
     "gram": "Gram",
     "decigram": "Decigram",
@@ -60,7 +63,62 @@
     "foot": "Foot",
     "link": "Link",
     "inch": "Inch",
-    "mil": "Mil"
+    "mil": "Mil",
+    "sqmile": "Square Mile",
+    "homestead": "Homestead",
+    "acre": "Acre",
+    "rood": "Rood",
+    "sqrod": "Square Rod",
+    "sqyard": "Square Yard",
+    "sqfoot": "Square Foot",
+    "sqinch": "Square Inch"
+  },
+  "us_solidSystem": {
+    "cbmile": "Cubic Mile",
+    "acrefoot": "Acre Foot",
+    "cbyard": "Cubic Yard",
+    "cbfoot": "Cubic Foot",
+    "cbinch": "Cubic Inch"
+  },
+  "us_aridSystem": {
+    "bushel": "Bushel",
+    "peck": "Peck",
+    "gallon": "Gallon",
+    "quart": "Quart",
+    "pint": "Pint"
+  },
+  "us_liquidSystem": {
+    "barrel": "Barrel",
+    "gallon": "Gallon",
+    "quart": "Quart",
+    "pint": "Pint",
+    "gill": "Gill",
+    "fluidounce": "Fluid Ounce",
+    "fluiddram": "Fluid Dram",
+    "minim": "Minim"
+  },
+  "imperial_solidSystem": {
+    "cbmile": "Cubic Mile",
+    "acrefoot": "Acre Foot",
+    "cbyard": "Cubic Yard",
+    "cbfoot": "Cubic Foot",
+    "cbinch": "Cubic Inch"
+  },
+  "imperial_aridSystem": {
+    "bushel": "Bushel",
+    "peck": "Peck",
+    "quart": "Quart"
+  },
+  "imperial_liquidSystem": {
+    "barrel": "Barrel",
+    "gallon": "Gallon",
+    "quart": "Quart",
+    "pint": "Pint",
+    "gill": "Gill",
+    "fluidounce": "Fluid Ounce",
+    "fluiddram": "Fruid Dram",
+    "fluidescropule": "Fluid Escropule",
+    "minim": "Minim"
   },
   "nauticSystem": {
     "nauticMile" : "Nautic Mile"

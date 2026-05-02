@@ -18,9 +18,9 @@ const areaSystem = {
             homestead: {factor: 647497.027584, symbol: '', name: 'imperialSystem.homestead'},
             acre: {factor: 4046.8564224, symbol: 'ac', name: 'imperialSystem.acre'},
             rood: {factor: 1011.7141056, symbol: '', name: 'imperialSystem.rood'},
-            barraQuad: {factor: 25.29285264, symbol: 'rd²', name: 'mimperialSystem.sqrod'},
+            barraQuad: {factor: 25.29285264, symbol: 'rd²', name: 'imperialSystem.sqrod'},
             jardaQuad: {factor: 0.83612736, symbol: 'yd²', name: 'imperialSystem.sqyard'},
-            peQuad: {factor: 0.09290304, symbol: 'ft²', name: 'imperialSystem.sqfeet'},
+            peQuad: {factor: 0.09290304, symbol: 'ft²', name: 'imperialSystem.sqfoot'},
             polegadaQuad: {factor: 0.00064516, symbol: 'in²', name: 'imperialSystem.sqinch'},
         }
     }

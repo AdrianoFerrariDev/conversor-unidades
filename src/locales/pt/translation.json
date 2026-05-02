@@ -5,11 +5,13 @@
   "volume": "Volume",
   "mass": "Massa",
   "speed": "Velocidade",
-  "lengthConv": "Conversor de Comprimento",
-  "areaConv": "Conversor de Área",
-  "volumeConv": "Conversor de Volume",
-  "massConv": "Conversor de Massa",
-  "speedConv": "Conversor de Velocidade",
+  "pageTitle": {
+    "lengthConv": "Conversor de Comprimento",
+    "areaConv": "Conversor de Área",
+    "volumeConv": "Conversor de Volume",
+    "massConv": "Conversor de Massa",
+    "speedConv": "Conversor de Velocidade"
+  },
   "result": "Resultado",
   "invert": "Inverter",
   "value": "Valor",

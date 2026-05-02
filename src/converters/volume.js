@@ -36,7 +36,7 @@ const volumeSystem = {
             uslpint: {factor: 0.00047317625, symbol: 'pt', name: 'us_liquidSystem.pint'},
             uslgill: {factor: 0.0001182940625, symbol: '', name: 'us_liquidSystem.gill'},
             uslonca_liquida: {factor: 0.000029573515625, symbol: 'fl oz', name: 'us_liquidSystem.fluidounce'},
-            usldracma_liquido: {factor: 0.000003696689453125, symbol: 'fl dr', name: 'us_liquidSystem.fluiddrad'},
+            usldracma_liquido: {factor: 0.000003696689453125, symbol: 'fl dr', name: 'us_liquidSystem.fluiddram'},
             uslminim: {factor: 0.0000000616114908854167, symbol: '', name: 'us_liquidSystem.minim'},
         }
     },
@@ -57,11 +57,11 @@ const volumeSystem = {
     britsh_liquid: {name: "Imperial/Britânico - Líquido", units: {
             brtlbarril: {factor: 0.15911315, symbol: '', name: 'imperial_liquidSystem.barrel'},
             brtlgalao: {factor: 0.00454609, symbol: 'gal', name: 'imperial_liquidSystem.gallon'},
-            brtlquarto: {factor: 0.0011365225, symbol: 'qt', name: 'imperial_liquidSystemSystem.quart'},
+            brtlquarto: {factor: 0.0011365225, symbol: 'qt', name: 'imperial_liquidSystem.quart'},
             brtlpint: {factor: 0.00056826125, symbol: 'pt', name: 'imperial_liquidSystem.pint'},
             brtlgill: {factor: 0.0001420653125, symbol: '', name: 'imperial_liquidSystem.gill'},
             brtlonca_liquida: {factor: 0.0000284130625, symbol: 'fl oz', name: 'imperial_liquidSystem.fluidounce'},
-            brtldracma_liquido: {factor: 0.0000035516328125, symbol: 'fl dr', name: 'imperial_liquidSystem.fluiddrad'},
+            brtldracma_liquido: {factor: 0.0000035516328125, symbol: 'fl dr', name: 'imperial_liquidSystem.fluiddram'},
             brtlescropulo_fluido: {factor: 0.00000118387760416667, symbol: '', name: 'imperial_liquidSystem.fluidescropule'},
             brtlminim: {factor: 0.0000000591938802083333, symbol: '', name: 'imperial_liquidSystem.minim'},
         }
