@@ -80,7 +80,7 @@ function Converter({ units, unitSystem, title }) {
             <section className="list-convertions">
                 {Object.entries(unitSystem).map(([systemKey, system]) => (
                     <div key={systemKey} className="table-group">
-                        <h3 className={units[to].system === systemKey ? 'active-system' : ''}>{t(unitSystem[systemKey].name)}</h3>
+                        <h3 className={`list-title${units[to].system === systemKey ? ' active-system' : ''}`}>{t(unitSystem[systemKey].name)}</h3>
                         <table>
                             <thead>
                                 <tr>
