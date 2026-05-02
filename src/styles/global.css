@@ -14,6 +14,7 @@
   --topdowncolor: #ebebeb;
   --contentbg: #f5f5f5;
   --textcontent: #333333;
+  --list-title: #7a4fc9;
   --rowhover: #d9cef8;
   --rowactive: #b199f5;
   --rowactivehover: #9e85e2;
@@ -29,6 +30,10 @@ body.dark {
   --topdownbg: #213657;
   --contentbg: #1a1c1a;
   --textcontent: #ebebeb;
+  --list-title: #9883ff;
+  --rowhover: #7861b8;
+  --rowactive: #432883;
+  --rowactivehover: #301c68;
   --bg: #0f172a;
   --card: #1e293b;
   --text: #f1f5f9;
@@ -246,7 +251,7 @@ p{
 }
 
 .active-system {
-  color: #0fa48f;;
+  color: var(--list-title);
 }
 
 table {
