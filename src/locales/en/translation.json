@@ -53,7 +53,14 @@
   },
   "imperialSystem": {
     "mile": "Mile",
-    "inch": "Inch"
+    "furlong": "Furlong",
+    "chain": "Chain",
+    "rod": "Rod",
+    "yard": "Yard",
+    "foot": "Foot",
+    "link": "Link",
+    "inch": "Inch",
+    "mil": "Mil"
   },
   "nauticSystem": {
     "nauticMile" : "Nautic Mile"
