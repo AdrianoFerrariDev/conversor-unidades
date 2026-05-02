@@ -22,41 +22,44 @@ function Home() {
     <div className="home">
       {/* Quick Converter */}
       <section className="converter">
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
         <div className="converter-row">
-          <select value={from} onChange={(e) => setFrom(e.target.value)}>
-            {Object.keys(units).map((key) => (
-              <option key={key} value={key}>
-                {key}
-              </option>
-            ))}
-          </select>
-          <button
-            className="swap-btn"
-            onClick={() => {
-              setFrom(to);
-              setTo(from);
-            }}
-          >
-            <ArrowLeftRight size={18} />
-          </button>
-          <select value={to} onChange={(e) => setTo(e.target.value)}>
-            {Object.keys(units).map((key) => (
-              <option key={key} value={key}>
-                {key}
-              </option>
-            ))}
-          </select>
+          <div className="converter-input">
+            <input
+              type="number"
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+            />
+          </div>
+          <div className="converter-config">
+            <select value={from} onChange={(e) => setFrom(e.target.value)}>
+              {Object.keys(units).map((key) => (
+                <option key={key} value={key}>
+                  {key}
+                </option>
+              ))}
+            </select>
+            <button
+              className="swap-btn"
+              onClick={() => {
+                setFrom(to);
+                setTo(from);
+              }}
+            >
+              <ArrowLeftRight size={18} />
+            </button>
+            <select value={to} onChange={(e) => setTo(e.target.value)}>
+              {Object.keys(units).map((key) => (
+                <option key={key} value={key}>
+                  {key}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
         <p className="result">
           Resultado: {convert(Number(value), from, to).toFixed(4)} {units[to].symbol}
         </p>
       </section>
-
       {/* Popular */}
       <section className="popular">
         <h2>Conversores populares</h2>

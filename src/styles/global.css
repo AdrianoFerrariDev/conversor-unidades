@@ -10,6 +10,10 @@
 }
 
  :root {
+  --topdownbg: #4574c1;
+  --topdowncolor: #ebebeb;
+  --contentbg: #f5f5f5;
+  --textcontent: #333333;
   --bg: #f5f7fa;
   --card: #ffffff;
   --text: #1f2937;
@@ -19,6 +23,9 @@
 }
 
 body.dark {
+  --topdownbg: #213657;
+  --contentbg: #1a1c1a;
+  --textcontent: #ebebeb;
   --bg: #0f172a;
   --card: #1e293b;
   --text: #f1f5f9;
@@ -28,8 +35,8 @@ body.dark {
 }
 
 body {
-  background: #f5f5f5;
-  color: #333;
+  background: var(--contentbg);
+  color: var(--textcontent);
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -69,8 +76,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  background: #111;
-  color: white;
+  background: var(--topdownbg);
+  color: var(--topdowncolor);
   padding: 0 16px;
 }
 
@@ -166,11 +173,6 @@ main {
   min-height: 100dvh;
 }
 
-input, select {
-  margin: 10px 10px 10px 0;
-  padding: 8px;
-}
-
 p{
   margin-top: 15px;
   font-weight: bold;
@@ -215,6 +217,7 @@ td, th {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: left;
+  width: 50%;
 }
 
 button svg {
@@ -222,58 +225,54 @@ button svg {
 }
 
 footer {
-  background: #111;
-  color: var(--subtext);
+  background: var(--topdownbg);
+  color: var(--topdowncolor);
   padding: 16px;
   text-align: center;
 }
 
  /* HOME */
-.hero {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  color: var(--subtext);
-}
-
-.converter input {
-  width: 100%;
-  padding: 0.8rem;
+.converter-input {
   margin-bottom: 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--text);
 }
 
-.converter-row {
+.converter-input input {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  display: inline-block;
+  padding: 16px;
+  width: 100%;
+}
+
+.converter-config {
   display: flex;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.converter select {
-  flex: 1;
-  padding: 0.6rem;
-  border-radius: 8px;
+.converter-config select {
   border: 1px solid var(--border);
+  border-radius: 8px;
   background: transparent;
   color: var(--text);
+  flex: 1;
+  padding: 16px;
+  width: fit-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.swap-btn {
+.converter-config .swap-btn {
   background: var(--primary);
+  border: 1px solid #424242;
+  border-radius: 6px;
   color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem;
   cursor: pointer;
+  min-width: 52px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .result {
@@ -308,4 +307,14 @@ footer {
 .card:hover {
   transform: translateY(-3px);
   border-color: var(--primary);
+}
+
+/* Media Queries */ 
+@media screen and (min-width: 640px) {
+  .converter-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.5rem;
+    width: 100%;
+  }
 }
