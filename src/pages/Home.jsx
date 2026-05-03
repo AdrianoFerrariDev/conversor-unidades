@@ -27,6 +27,7 @@ function Home() {
             <input
               type="number"
               value={value}
+              autoFocus
               onChange={(e) => setValue(e.target.value)}
             />
           </div>

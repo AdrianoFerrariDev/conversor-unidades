@@ -90,7 +90,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* Header */
-
 header {
   background: var(--topdownbg);
   color: var(--topdowncolor);
@@ -101,18 +100,12 @@ header {
   position: relative;
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
+.nav-menu ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-nav {
-  display: flex;
-  gap: 15px;
-  padding: 12px 0 4px;
-}
-
-nav a {
+.nav-menu a {
   color: white;
   font-size: 1rem;
   position: relative;
@@ -120,7 +113,7 @@ nav a {
   transition: all ease 300ms;
 }
 
-nav a::after {
+.nav-menu a::after {
   content: "";
   background-color: #e7e77a;
   height: 4px;
@@ -131,11 +124,11 @@ nav a::after {
   width: 0;
 }
 
-nav a:hover {
+.nav-menu a:hover {
   color: #e7e77a;
 }
 
-nav a:hover::after {
+.nav-menu a:hover::after {
   width: 100%;
 }
 
@@ -341,6 +334,16 @@ footer {
   .container {
     max-width: 1200px;
     width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    gap: 15px
   }
 
   .converter-row {

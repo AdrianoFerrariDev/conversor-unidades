@@ -39,13 +39,15 @@ function Header() {
                     <p>Rápido, preciso e gratuíto</p>
                 </div>
                     <div className="menu">
-                        <nav>
-                            <Link to={`/${lang}`}>Home</Link>
-                            <Link to={`/${lang}/${routes[lang].length}`}>{t('length')}</Link>
-                            <Link to={`/${lang}/${routes[lang].area}`}>{(t('area'))}</Link>
-                            <Link to={`/${lang}/${routes[lang].volume}`}>{t('volume')}</Link>
-                            <Link to={`/${lang}/${routes[lang].mass}`}>{t('mass')}</Link>
-                            <Link to={`/${lang}/${routes[lang].speed}`}>{t('speed')}</Link>
+                        <nav className="nav-menu">
+                            <ul>
+                                <li><Link to={`/${lang}`}>Home</Link></li>
+                                <li><Link to={`/${lang}/${routes[lang].length}`}>{t('length')}</Link></li>
+                                <li><Link to={`/${lang}/${routes[lang].area}`}>{(t('area'))}</Link></li>
+                                <li><Link to={`/${lang}/${routes[lang].volume}`}>{t('volume')}</Link></li>
+                                <li><Link to={`/${lang}/${routes[lang].mass}`}>{t('mass')}</Link></li>
+                                <li><Link to={`/${lang}/${routes[lang].speed}`}>{t('speed')}</Link></li>
+                            </ul>
                         </nav>
                         <div className="change-lang">
                             <select className="select-lang" onChange={(e) => changeLanguage(e.target.value)}>
