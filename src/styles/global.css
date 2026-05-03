@@ -10,36 +10,37 @@
 }
 
  :root {
-  --topdownbg: #4574c1;
-  --topdowncolor: #ebebeb;
-  --contentbg: #f5f5f5;
+  --blue-primary: #4574c1;
+  --presentation-text: #ebebeb;
+  --contentbg: #f5f5fa;
   --textcontent: #333333;
-  --list-title: #7a4fc9;
-  --rowhover: #d9cef8;
-  --rowactive: #b199f5;
-  --rowactivehover: #9e85e2;
+  --purple-primary: #7a4fc9;
+  --purple-secondary: #b199f5;
+  --purple-tertiary: #d9cef8;
   --bg: #f5f7fa;
   --card: #ffffff;
   --text: #1f2937;
+  --opt-text: #1f2937;
   --subtext: #6b7280;
   --primary: #3b82f6;
-  --border: #e5e7eb;
+  --border: #b3bfcf;
+  --border-focus: #4574c1;
 }
 
 body.dark {
-  --topdownbg: #213657;
+  --blue-primary: #213657;
   --contentbg: #1a1c1a;
   --textcontent: #ebebeb;
-  --list-title: #9883ff;
-  --rowhover: #7861b8;
-  --rowactive: #432883;
-  --rowactivehover: #301c68;
+  --purple-primary: #9883ff;
+  --purple-secondary: #432883;
+  --purple-tertiary: #7861b8;
   --bg: #0f172a;
   --card: #1e293b;
   --text: #f1f5f9;
   --subtext: #94a3b8;
   --primary: #60a5fa;
-  --border: #334155;
+  --border: #e5e7eb;
+  --border-focus: #c7ccd5;
 }
 
 body {
@@ -91,13 +92,56 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 header {
-  background: var(--topdownbg);
-  color: var(--topdowncolor);
+  background: var(--blue-primary);
+  color: var(--presentation-text);
   padding: 0 16px;
 }
 
 .header-container {
   position: relative;
+}
+
+.menu {
+  padding-top: 10px;
+}
+
+.nav-menu {
+  background-color: var(--blue-primary);
+  height: 100dvh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  transition: right ease 300ms;
+  width: 200px;
+}
+
+.nav-menu.open-menu {
+  right: 0;
+}
+
+.menu-buttons {
+  display: flex;
+  gap: 6px;
+  position: absolute;
+  top: 10px;
+  right: calc(100% + 3px);
+  min-width: max-content;
+  z-index: 1;
+}
+
+.menu-buttons button {
+  background-color: var(--blue-primary);
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  color: #ebebeb;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-button svg {
+  max-width: fit-content;
+  
 }
 
 .nav-menu ul {
@@ -133,9 +177,14 @@ header {
 }
 
 .select-lang {
-  border-radius: 6px;
-  font-size: 14px;
-  padding: 4px 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  display: block;
+  padding: 8px 16px;
+}
+
+.select-lang:focus {
+  outline: #ebebeb;
 }
 
 .lang-buttons {
@@ -150,18 +199,6 @@ header {
   font-size: 14px;
   margin: 0 1px;
   padding: 4px 10px;
-}
-
-.theme-toggle {
-  background: var(--card);
-  border: 1px solid #333;
-  border-radius: 8px;
-  cursor: pointer;
-  padding: 8px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
 }
 
 /* Content */
@@ -194,11 +231,15 @@ p{
   width: 100%;
 }
 
+.converter-input input:focus {
+  outline-color: var(--border-focus);
+}
+
 .converter-config {
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .converter-config select {
@@ -209,6 +250,14 @@ p{
   display: block;
   padding: 16px;
   width: 100%;
+}
+
+.converter-config select:focus {
+  outline-color: var(--border-focus);
+}
+
+.converter-config option {
+  color: var(--opt-text);
 }
 
 .converter-config .swap-btn {
@@ -244,7 +293,7 @@ p{
 }
 
 .active-system {
-  color: var(--list-title);
+  color: var(--purple-primary);
 }
 
 table {
@@ -253,26 +302,22 @@ table {
 }
 
 .table-row {
-  transition: background 0.2s;
+  transition: background 100ms;
 }
 
 .clickable {
   cursor: pointer;
-  transition: background ease-in 200ms;
-}
-
-.clickable:hover {
-  background: var(--rowactivehover);
+  transition: background ease-in 100ms;
 }
 
 .active-row {
-  background: var(--rowactive);
+  background: var(--purple-secondary);
   font-weight: bold;
-  transition: background ease-in 200ms;
+  transition: background ease-in 100ms;
 }
 
 .clickable:hover:not(.active-row) {
-  background: var(--rowhover);
+  background: var(--purple-tertiary);
 }
 
 td, th {
@@ -287,8 +332,8 @@ button svg {
 }
 
 footer {
-  background: var(--topdownbg);
-  color: var(--topdowncolor);
+  background: var(--blue-primary);
+  color: var(--presentation-text);
   padding: 16px;
   text-align: center;
 }
@@ -328,6 +373,11 @@ footer {
   .converter-config {
     flex-direction: row;
   }
+
+  .nav-menu {
+    right: -220px;
+    width: 220px;
+  }
 }
 
 @media screen and (min-width: 720px) {
@@ -337,8 +387,25 @@ footer {
   }
 
   .menu {
+    align-items: center;
     display: flex;
     justify-content: space-between;
+  }
+
+  .nav-menu {
+    height: auto;
+    padding: 0;
+    position: static;
+    width: max-content;
+  }
+
+  .menu-buttons {
+    right: 20px;
+    top: 20px;
+  }
+
+  .menu-button {
+    display: none;
   }
 
   .nav-menu ul {
