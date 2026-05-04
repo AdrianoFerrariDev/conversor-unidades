@@ -75,7 +75,7 @@ function Converter({ units, unitSystem, title }) {
                         </select>
                     </div>                    
                 </div>
-                <p className="result">Resultado: {value} {units[from].symbol} <span className="equal">=</span> {result} {units[to].symbol}</p>
+                <p className="result">{t('result')}: {value} {units[from].symbol} <span className="equal">=</span> {result} {units[to].symbol}</p>
             </section>
             <section className="list-convertions">
                 {Object.entries(unitSystem).map(([systemKey, system]) => (

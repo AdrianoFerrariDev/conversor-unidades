@@ -13,7 +13,6 @@
     "speedConv": "Conversor de Velocidade"
   },
   "result": "Resultado",
-  "invert": "Inverter",
   "value": "Valor",
   "unity": "Unidade",
   "metric": "Métrico",
@@ -24,6 +23,9 @@
   "american-solid": "American - Sólido",
   "american-arid": "American - Árido",
   "american-liquid": "American - Líquido",
+  "imperial-avoirdupois": "Imperial - Avoirdupois",
+  "imperial-troy": "Imperial - Troy",
+  "relevants": "Unidades Relevantes",
   "metricSystem": {
     "kilometer": "Quilômetro",
     "hectometer": "Hectômetro",
@@ -54,32 +56,42 @@
     "milliliter": "Millilitro",
     "ton": "Tonelada",
     "kilogram": "Quilograma",
+    "hectogram": "Hectograma",
+    "decagram": "Decagrama",
     "gram": "Grama",
     "decigram": "Decígrama",
     "centigram": "Centígrama",
     "milligram": "Milígrama",
-    "metersec": "Metro por Segundo",
+    "microgram": "Micrograma",
+    "nanogram": "Nanograma",
+    "kilometerhour": "Quilômetro por Hora",
+    "kilometerminute": "Quilômetro por Minuto",
     "kilometersec": "Quilômetro por Segundo",
-    "kilometerhour": "Quilômetro por Hora"
+    "metersec": "Metro por Segundo",
+    "millimetersec": "Millímetro por Segundo"
   },
   "imperialSystem": {
     "mile": "Milha",
     "furlong": "Furlong",
     "chain": "Corrente",
-    "rod": "Rod",
-    "yard": "Yard",
+    "rod": "Barra",
+    "yard": "Jarda",
     "foot": "Pé",
     "link": "Link",
     "inch": "Polegada",
     "mil": "Mil",
     "sqmile": "Milha Quadrada",
-    "homestead": "Homestead",
+    "homestead": "Granja",
     "acre": "Acre",
     "rood": "Rood",
-    "sqrod": "Square Rod",
-    "sqyard": "Square Yard",
+    "sqrod": "Barra Quadrad",
+    "sqyard": "Jarda Quadrada",
     "sqfoot": "Pé Quadrado",
-    "sqinch": "Polegada Quadrada"
+    "sqinch": "Polegada Quadrada",
+    "milehour": "Milha por Hora",
+    "milesec": "Milha por Segundo",
+    "footsec": "Pé por Segundo",
+    "inchsec": "Polegada por Segundo"
   },
   "us_solidSystem": {
     "cbmile": "Cubic Mile",
@@ -128,10 +140,27 @@
     "fluidescropule": "Fluid Escropule",
     "minim": "Minim"
   },
+  "avoirdupoisSystem": {
+    "stone": "Stone",
+    "pound": "Pound",
+    "ounce": "Ounce",
+    "dram": "Dracma",
+    "grain": "Grain"
+  },
+  "troySystem": {
+    "poundtroy": "Pound Troy",
+    "ouncetroy": "Ounce Troy",
+    "dramtroy": "Dracma Troy",
+    "pennyweight": "Pennyweight"
+  },
   "nauticSystem": {
     "nauticMile" : "Nautic Mile"
   },
   "astronomicSystem": {
     "parsec": "Parsec"
+  },
+  "relevantUnits": {
+    "lightspeed": "Velocidade da Luz",
+    "soundspeed": "Velocidade do Som"
   }
 }

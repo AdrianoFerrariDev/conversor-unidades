@@ -13,7 +13,6 @@
     "speedConv": "Speed Converter"
   },
   "result": "Result",
-  "invert": "Invert",
   "value": "Value",
   "unity": "Unity",
   "metric": "Metric",
@@ -24,6 +23,9 @@
   "american-solid": "American - Solid",
   "american-arid": "American - Arid",
   "american-liquid": "American - Liquid",
+  "imperial-avoirdupois": "Imperial - Avoirdupois",
+  "imperial-troy": "Imperial - Troy",
+  "relevants": "Relevant Units",
   "metricSystem": {
     "kilometer": "Kilometer",
     "hectometer": "Hectometer",
@@ -54,13 +56,19 @@
     "milliliter": "Milliliter",
     "ton": "Ton",
     "kilogram": "Kilogram",
+    "hectogram": "Hectogram",
+    "decagram": "Decagram",
     "gram": "Gram",
     "decigram": "Decigram",
     "centigram": "Centigram",
     "milligram": "Miligram",
-    "metersec": "Meter per Second",
+    "microgram": "Microgram",
+    "nanogram": "Nanogram",
+    "kilometerhour": "Kilometer per Hour",
+    "kilometerminute": "Kilometer per Minute",
     "kilometersec": "Kilometer per Second",
-    "kilometerhour": "Kilometer per Hour"
+    "metersec": "Meter per Second",
+    "millimetersec": "Millimiter per Second"
   },
   "imperialSystem": {
     "mile": "Mile",
@@ -79,7 +87,11 @@
     "sqrod": "Square Rod",
     "sqyard": "Square Yard",
     "sqfoot": "Square Foot",
-    "sqinch": "Square Inch"
+    "sqinch": "Square Inch",
+    "milehour": "Mile per Hour",
+    "milesec": "Mile per Second",
+    "footsec": "Foot per Second",
+    "inchsec": "Inch per Second"
   },
   "us_solidSystem": {
     "cbmile": "Cubic Mile",
@@ -128,10 +140,27 @@
     "fluidescropule": "Fluid Escropule",
     "minim": "Minim"
   },
+  "avoirdupoisSystem": {
+    "stone": "Stone",
+    "pound": "Pound",
+    "ounce": "Ounce",
+    "dram": "Dracma",
+    "grain": "Grain"
+  },
+  "troySystem": {
+    "poundtroy": "Pound Troy",
+    "ouncetroy": "Ounce Troy",
+    "dramtroy": "Dracma Troy",
+    "pennyweight": "Pennyweight"
+  },
   "nauticSystem": {
     "nauticMile" : "Nautic Mile"
   },
   "astronomicSystem": {
     "parsec": "Parsec"
+  },
+  "relevantUnits": {
+    "lightspeed": "Light Speed",
+    "soundspeed": "Sound Speed"
   }
 }
