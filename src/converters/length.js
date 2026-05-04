@@ -1,7 +1,7 @@
 import { createUnitSystem } from "../utils/createUnitSystem";
 
 const lengthSystem = {
-    metric: { name: "Métrico", units: {
+    metric: { name: "metric", units: {
             quilometro: {factor: 1000, symbol: 'km', name: 'metricSystem.kilometer'},
             hectometro: {factor: 100, symbol: 'hm', name: 'metricSystem.hectometer'},
             decametro: {factor: 10, symbol: 'dam', name: 'metricSystem.decameter'},
@@ -13,7 +13,7 @@ const lengthSystem = {
             nanometro: {factor: 0.000000001, symbol: 'nm', name: 'metricSystem.nanometer'},
         },
     },
-    imperial: { name: "Imperial", units: {
+    imperial: { name: "imperial", units: {
             milha: {factor: 1609.344, symbol: 'mi', name: 'imperialSystem.mile'},
             furlong: { factor: 201.168, symbol: "fur", name: 'imperialSystem.furlong'},
             corrente: { factor: 20.1168, symbol: "ch", name: 'imperialSystem.chain'},

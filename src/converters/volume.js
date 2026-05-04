@@ -1,7 +1,7 @@
 import { createUnitSystem } from "../utils/createUnitSystem";
 
 const volumeSystem = {
-    metric: { name: "Métrico" , units: {
+    metric: { name: "metric" , units: {
             quilometroCub: {factor: 1000000000, symbol: 'km³', name: 'metricSystem.cbkilometer'},
             metroCub: {factor: 1, symbol: 'm³', name: 'metricSystem.cbmeter'},
             decimetroCub: { factor: 0.001, symbol: 'dm³', name: 'metricSystem.cbdecimeter'},
@@ -13,7 +13,7 @@ const volumeSystem = {
             mililitro: {factor: 0.000001, symbol: 'mL', name: 'metricSystem.milliliter'},
         }
     },
-    us_solid: { name: "Americano - Sólidos", units: {
+    us_solid: { name: "american-solid", units: {
             usmilhaCub: {factor: 4168181825.44058, symbol: 'mi³', name: 'us_solidSystem.cbmile'},
             usacre_pe: {factor: 33.30400961378304, symbol: '', name: 'us_solidSystem.acrefoot'},
             usjardaCub: {factor: 0.764554857984, symbol: 'yd³', name: 'us_solidSystem.cbyard'},
@@ -21,7 +21,7 @@ const volumeSystem = {
             uspolegadaCub: {factor: 0.000016387064, symbol: 'in³', name: 'us_solidSystem.cbinch'},
         }
     },
-    us_arid: {name: "Americano - Árido", units: {
+    us_arid: {name: "american-arid", units: {
             usabushel: {factor: 0.03523907016688, symbol: 'bu', name: 'us_aridSystem.bushel'},
             usapeck: {factor: 0.00880976754172, symbol: 'pk', name: 'us_aridSystem.peck'},
             usagalao: {factor: 0.00440488377086, symbol: 'gal', name: 'us_aridSystem.gallon'},
@@ -29,7 +29,7 @@ const volumeSystem = {
             usapint: {factor: 0.0005506104713575, symbol: 'pt', name: 'us_aridSystem.pint'},
         }   
     },
-    us_liquid: {name: "Americano - Líquido", units: {
+    us_liquid: {name: "american-liquid", units: {
             uslbarril: {factor: 0.15898722, symbol: '', name: 'us_liquidSystem.barrel'},
             uslgalao: {factor: 0.00378541, symbol: 'gal', name: 'us_liquidSystem.gallon'},
             uslquarto: {factor: 0.0009463525, symbol: 'qt', name: 'us_liquidSystem.quart'},
@@ -40,7 +40,7 @@ const volumeSystem = {
             uslminim: {factor: 0.0000000616114908854167, symbol: '', name: 'us_liquidSystem.minim'},
         }
     },
-    british_solid: {name: "Imperial/Britânico - Sólidos", units: {
+    british_solid: {name: "imperial-solid", units: {
             brtmilhaCub: {factor: 4168181825.44058, symbol: 'mi³', name: 'imperial_solidSystem.cbmile'},
             brtacre_pe: {factor: 33.30400961378304, symbol: '', name: 'imperial_solidSystem.acrefoot'},
             brtjardaCub: {factor: 0.764554857984, symbol: 'yd³', name: 'imperial_solidSystem.cbyard'},
@@ -48,13 +48,13 @@ const volumeSystem = {
             brtpolegadaCub: {factor: 0.000016387064, symbol: 'in³', name: 'imperial_solidSystem.cbinch'},
         }
     },
-    british_arid: {name: "Imperial/Britânico- Árido", units: {
+    british_arid: {name: "imperial-arid", units: {
             brtabushel: {factor: 0.04232035869184, symbol: 'bu', name: 'imperial_aridSystem.bushel'},
             brtapeck: {factor: 0.01058008967296, symbol: 'pk', name: 'imperial_aridSystem.peck'},
             brtaquarto: {factor: 0.00132251120912, symbol: 'qt', name: 'imperial_aridSystem.quart'},
         }
     },
-    britsh_liquid: {name: "Imperial/Britânico - Líquido", units: {
+    britsh_liquid: {name: "imperial-liquid", units: {
             brtlbarril: {factor: 0.15911315, symbol: '', name: 'imperial_liquidSystem.barrel'},
             brtlgalao: {factor: 0.00454609, symbol: 'gal', name: 'imperial_liquidSystem.gallon'},
             brtlquarto: {factor: 0.0011365225, symbol: 'qt', name: 'imperial_liquidSystem.quart'},

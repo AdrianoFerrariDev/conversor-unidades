@@ -16,12 +16,122 @@
   "invert": "Inverter",
   "value": "Valor",
   "unity": "Unidade",
-  "units" : {
-    "meter": "Metro",
+  "metric": "Métrico",
+  "imperial": "Imperial",
+  "imperial-solid": "Imperial/Britânico - Sólido",
+  "imperial-arid": "Imperial/Britânico - Árido",
+  "imperial-liquid": "Imperial/Britânico - Líquido",
+  "american-solid": "American - Sólido",
+  "american-arid": "American - Árido",
+  "american-liquid": "American - Líquido",
+  "metricSystem": {
     "kilometer": "Quilômetro",
+    "hectometer": "Hectômetro",
+    "decameter": "Decâmetro",
+    "meter": "Metro",
     "decimeter": "Decímetro",
     "centimeter": "Centímetro",
-    "millimeter": "Milímetro",
-    "mile": "Milha"
+    "millimeter": "Millímetro",
+    "micrometer": "Micrômetro",
+    "nanometer": "Nanômetro",
+    "sqkilometer": "Quilômetro Quadrado",
+    "sqhectometer": "Hectômetro Quadrado",
+    "sqdecameter": "Decâmetro Quadrado",
+    "sqmeter": "Metro Quadrado",
+    "sqdecimeter": "Decímetro Quadrado",
+    "sqcentimeter": "Centímetro Quadrado",
+    "sqmillimeter": "Millímetro Quadrado",
+    "sqmicrometer": "Micrômetro Quadrado",
+    "sqnanometer": "Nanômetro Quadrado",
+    "cbkilometer": "Quilômetro Cúbico",
+    "cbmeter": "Metro Cúbico",
+    "cbdecimeter": "Decímetro Cúbico",
+    "cbcentimeter": "Centímetro Cúbico",
+    "cbmillimeter": "Millímetro Cúbico",
+    "liter": "Litro",
+    "deciliter": "Decilitro",
+    "centiliter": "Centilitro",
+    "milliliter": "Millilitro",
+    "ton": "Tonelada",
+    "kilogram": "Quilograma",
+    "gram": "Grama",
+    "decigram": "Decígrama",
+    "centigram": "Centígrama",
+    "milligram": "Milígrama",
+    "metersec": "Metro por Segundo",
+    "kilometersec": "Quilômetro por Segundo",
+    "kilometerhour": "Quilômetro por Hora"
+  },
+  "imperialSystem": {
+    "mile": "Milha",
+    "furlong": "Furlong",
+    "chain": "Corrente",
+    "rod": "Rod",
+    "yard": "Yard",
+    "foot": "Pé",
+    "link": "Link",
+    "inch": "Polegada",
+    "mil": "Mil",
+    "sqmile": "Milha Quadrada",
+    "homestead": "Homestead",
+    "acre": "Acre",
+    "rood": "Rood",
+    "sqrod": "Square Rod",
+    "sqyard": "Square Yard",
+    "sqfoot": "Pé Quadrado",
+    "sqinch": "Polegada Quadrada"
+  },
+  "us_solidSystem": {
+    "cbmile": "Cubic Mile",
+    "acrefoot": "Acre Foot",
+    "cbyard": "Cubic Yard",
+    "cbfoot": "Cubic Foot",
+    "cbinch": "Cubic Inch"
+  },
+  "us_aridSystem": {
+    "bushel": "Bushel",
+    "peck": "Peck",
+    "gallon": "Gallon",
+    "quart": "Quart",
+    "pint": "Pint"
+  },
+  "us_liquidSystem": {
+    "barrel": "Barrel",
+    "gallon": "Gallon",
+    "quart": "Quart",
+    "pint": "Pint",
+    "gill": "Gill",
+    "fluidounce": "Fluid Ounce",
+    "fluiddram": "Fluid Dram",
+    "minim": "Minim"
+  },
+  "imperial_solidSystem": {
+    "cbmile": "Cubic Mile",
+    "acrefoot": "Acre Foot",
+    "cbyard": "Cubic Yard",
+    "cbfoot": "Cubic Foot",
+    "cbinch": "Cubic Inch"
+  },
+  "imperial_aridSystem": {
+    "bushel": "Bushel",
+    "peck": "Peck",
+    "quart": "Quart"
+  },
+  "imperial_liquidSystem": {
+    "barrel": "Barrel",
+    "gallon": "Gallon",
+    "quart": "Quart",
+    "pint": "Pint",
+    "gill": "Gill",
+    "fluidounce": "Fluid Ounce",
+    "fluiddram": "Fruid Dram",
+    "fluidescropule": "Fluid Escropule",
+    "minim": "Minim"
+  },
+  "nauticSystem": {
+    "nauticMile" : "Nautic Mile"
+  },
+  "astronomicSystem": {
+    "parsec": "Parsec"
   }
 }

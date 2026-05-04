@@ -1,7 +1,7 @@
 import { createUnitSystem } from "../utils/createUnitSystem";
 
 const areaSystem = {
-    metric: { name: "Métrico", units: {
+    metric: { name: 'metric', units: {
             quilometroQuad: {factor: 1000000, symbol: 'km²', name: 'metricSystem.sqkilometer'},
             hectometroQuad: {factor: 10000, symbol: 'hm²', name: 'metricSystem.sqhectometer'},
             decametroQuad: {factor: 100, symbol: 'dam²', name: 'metricSystem.sqdecameter'},
@@ -13,7 +13,7 @@ const areaSystem = {
             nanometroQuad: {factor: 1e-18, symbol: 'mm²', name: 'metricSystem.sqnanometer'},
         }
     },
-    imperial: { name: "Imperial", units: {
+    imperial: { name: "imperial", units: {
             milhaQuad: {factor: 2589988.110336, symbol: 'mi²', name: 'imperialSystem.sqmile'},
             homestead: {factor: 647497.027584, symbol: '', name: 'imperialSystem.homestead'},
             acre: {factor: 4046.8564224, symbol: 'ac', name: 'imperialSystem.acre'},

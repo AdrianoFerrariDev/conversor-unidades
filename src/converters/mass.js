@@ -1,7 +1,7 @@
 import { createUnitSystem } from "../utils/createUnitSystem";
 
 const massSystem = {
-        metric: { name: "Metrico", units: {
+        metric: { name: "metric", units: {
                 tonelada: { factor: 1000000, symbol: 'ton', name:'metricSystem.ton'},
                 quilograma: {factor: 1000, symbol: 'kg', name: 'metricSystem.kilogram'},
                 grama: {factor: 1, symbol: 'g', name: 'metricSystem.gram'},

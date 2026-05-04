@@ -1,4 +1,4 @@
 export const langList = {
     pt: "Português",
-    en: "Inglês"
+    en: "English"
 }
