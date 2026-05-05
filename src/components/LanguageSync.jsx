@@ -6,7 +6,7 @@ function LanguageSync() {
   const { lang } = useParams()
 
   useEffect(() => {
-    if (lang && lang !== i18n.language) {
+    if (lang) {
       i18n.changeLanguage(lang)
       localStorage.setItem('lang', lang)
     }

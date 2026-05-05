@@ -48,7 +48,7 @@ body.dark {
 body {
   background: var(--contentbg);
   color: var(--textcontent);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }

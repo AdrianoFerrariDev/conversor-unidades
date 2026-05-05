@@ -1,66 +1,20 @@
 import { useState } from "react";
-import { ArrowLeftRight } from "lucide-react";
+import Converter from "../components/Converter";
+import { units, unitSystem } from '../converters/length'
+import { useTranslation } from "react-i18next";
 
 function Home() {
-  const [value, setValue] = useState(1)
-  const [from, setFrom] = useState("meter")
-  const [to, setTo] = useState("kilometer")
-  
-  const units = {
-    meter: { factor: 1, symbol: "m" },
-    kilometer: { factor: 1000, symbol: "km" },
-    centimeter: { factor: 0.01, symbol: "cm" },
-    mile: { factor: 1609.34, symbol: "mi" },
-  }
-
-  function convert(value, from, to) {
-      const base = value * units[from].factor
-      return base / units[to].factor
-  }
+  const { t } = useTranslation()
 
   return (
     <div className="home">
       {/* Quick Converter */}
-      <section className="converter">
-        <div className="converter-row">
-          <div className="converter-input">
-            <input
-              type="number"
-              value={value}
-              autoFocus
-              onChange={(e) => setValue(e.target.value)}
-            />
-          </div>
-          <div className="converter-config">
-            <select value={from} onChange={(e) => setFrom(e.target.value)}>
-              {Object.keys(units).map((key) => (
-                <option key={key} value={key}>
-                  {key}
-                </option>
-              ))}
-            </select>
-            <button
-              className="swap-btn"
-              onClick={() => {
-                setFrom(to);
-                setTo(from);
-              }}
-            >
-              <ArrowLeftRight size={18} />
-            </button>
-            <select value={to} onChange={(e) => setTo(e.target.value)}>
-              {Object.keys(units).map((key) => (
-                <option key={key} value={key}>
-                  {key}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-        <p className="result">
-          Resultado: {convert(Number(value), from, to).toFixed(4)} {units[to].symbol}
-        </p>
-      </section>
+      <Converter 
+        title={t('pageTitle.lengthConv')}
+        unitSystem={unitSystem}
+        units={units}
+        showTable={false}
+      />
       {/* Popular */}
       <section className="popular">
         <h2>Conversores populares</h2>

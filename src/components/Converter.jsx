@@ -3,7 +3,7 @@ import { formatNumber } from "../utils/formatNumber";
 import { useTranslation } from "react-i18next";
 import { ArrowLeftRight } from "lucide-react";
 
-function Converter({ units, unitSystem, title }) {
+function Converter({ units, unitSystem, title, showTable=true }) {
     const unitKeys = Object.keys(units)
     const { t, i18n } = useTranslation()
 
@@ -77,6 +77,7 @@ function Converter({ units, unitSystem, title }) {
                 </div>
                 <p className="result">{t('result')}: {value} {units[from].symbol} <span className="equal">=</span> {result} {units[to].symbol}</p>
             </section>
+            {showTable && (
             <section className="list-convertions">
                 {Object.entries(unitSystem).map(([systemKey, system]) => (
                     <div key={systemKey} className="table-group">
@@ -113,6 +114,7 @@ function Converter({ units, unitSystem, title }) {
                     </div>
                 ))}
             </section>
+            )}
         </>
     )
 }
