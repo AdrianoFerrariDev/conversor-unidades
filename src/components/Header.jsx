@@ -51,6 +51,15 @@ function Header() {
         document.querySelector('.nav-menu').classList.toggle('open-menu')
     },[openMenu])
 
+    useEffect(() => {
+        setOpenMenu(false)
+    }, [location.pathname])
+
+    // Impede scroll da tela quando o menu está aberto
+    useEffect(() => {
+        document.body.style.overflow = openMenu ? "hidden" : "auto"
+    },[openMenu])
+
     function handleChangeLanguage(newLang) {
         const segments = location.pathname.split("/")
         const currentLang = segments[1];
