@@ -214,6 +214,20 @@ p{
   font-weight: bold;
 }
 
+.breadcrumbs {
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs a {
+  color: var(--blue-primary);
+  text-decoration: none;
+}
+
+.breadcrumbs span {
+  color: var(--text);
+}
+
 .converter {
   margin-bottom: 1rem;
 }
