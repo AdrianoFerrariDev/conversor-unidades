@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { setHrefLangs, setPageSEO } from "../utils/seo";
-import { setJSONLD } from "../utils/jsonld";
 
 function About() {
     const { t } = useTranslation();

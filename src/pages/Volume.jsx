@@ -3,8 +3,6 @@ import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/volume'
 import { useTranslation } from "react-i18next";
 import { setPageSEO } from "../utils/seo";
-import { setJSONLD } from "../utils/jsonld";
-
 
 function Volume() {
     const { t } = useTranslation()
