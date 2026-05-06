@@ -18,12 +18,12 @@ function Volume() {
         })
     }, [t])
 
-    setJSONLD({
+    /*setJSONLD({
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: `${t("volume")}`,
         url: window.location.origin
-    })
+    })*/
     
     return (
         <Converter 

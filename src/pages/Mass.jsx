@@ -17,12 +17,12 @@ function Mass() {
         })
     }, [t])
 
-    setJSONLD({
+    /*setJSONLD({
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: `${t("mass")}`,
         url: window.location.origin
-    })
+    })*/
 
     return(
         <Converter

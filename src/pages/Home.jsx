@@ -3,7 +3,6 @@ import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/length'
 import { useTranslation } from "react-i18next";
 import { setPageSEO } from "../utils/seo";
-import { setJSONLD } from "../utils/jsonld";
 
 function Home() {
   const { t } = useTranslation()
@@ -17,12 +16,12 @@ function Home() {
         })
   })
 
-  setJSONLD({
+  /*setJSONLD({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: `${t("title")}`,
     url: window.location.origin
-  })
+  })*/
 
   return (
     <div className="home">

@@ -17,12 +17,12 @@ function About() {
         setHrefLangs("about");
     });
 
-    setJSONLD({
+    /*setJSONLD({
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: `${t("about")}`,
         url: window.location.origin
-    });
+    });*/
 
     return (
         <>

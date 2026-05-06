@@ -17,12 +17,12 @@ function Area() {
         })
     }, [t])
 
-    setJSONLD({
+    /*setJSONLD({
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: `${t("area")}`,
         url: window.location.origin
-    })
+    })*/
     
     return (
         <Converter 
