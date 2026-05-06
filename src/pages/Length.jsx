@@ -1,30 +1,27 @@
-import { useEffect } from "react";
 import Converter from "../components/Converter"
 import { units, unitSystem } from '../converters/length'
 import { useTranslation } from "react-i18next";
-import { setHrefLangs, setPageSEO } from "../utils/seo";
-import { setJSONLD } from "../utils/jsonld";
+import { useSEO } from "../hooks/useSEO";
 
 function Length() {
     const { t } = useTranslation()
 
-    useEffect(() => {
-        setPageSEO({
-            title: `${t("length")} | ${t("title")}`,
-            description: t("description.length"),
-            url: window.location.href,
-            image: "/preview.png"
-        });
-
-        setHrefLangs("length");
-    }, [t])
-
-    setJSONLD({
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: `${t("length")}`,
-        url: window.location.origin
-    })
+    useSEO({
+        title: t("length"),
+        description: t("description.length"),
+        routeKey: "length",
+        breadcrumbs: true,
+        faq: [
+            {
+                question: t("faq.length.q1"),
+                answer: t("faq.length.a1")
+            },
+            {
+                question: t("faq.length.q2"),
+                answer: t("faq.length.a2")
+            }
+        ]
+    });
 
     return (
         <Converter

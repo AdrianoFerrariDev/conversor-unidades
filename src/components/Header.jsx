@@ -102,6 +102,7 @@ function Header() {
                                 <li><Link to={`/${lang}/${routes[lang].volume}`}>{t('volume')}</Link></li>
                                 <li><Link to={`/${lang}/${routes[lang].mass}`}>{t('mass')}</Link></li>
                                 <li><Link to={`/${lang}/${routes[lang].speed}`}>{t('speed')}</Link></li>
+                                <li><Link to={`/${lang}/${routes[lang].about}`}>{t('about')}</Link></li>
                             </ul>
                         </nav>
                         <div className="change-lang">

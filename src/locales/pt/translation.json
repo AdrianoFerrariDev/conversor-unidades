@@ -6,13 +6,15 @@
     "area": "",
     "volume": "",
     "mass": "",
-    "speed": ""
+    "speed": "",
+    "about": ""
   },
   "length": "Comprimento",
   "area": "Área",
   "volume": "Volume",
   "mass": "Massa",
   "speed": "Velocidade",
+  "about": "Sobre",
   "pageTitle": {
     "lengthConv": "Conversor de Comprimento",
     "areaConv": "Conversor de Área",

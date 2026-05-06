@@ -5,7 +5,8 @@ export const routes = {
         area: 'area',
         volume: 'volume',
         mass: 'massa',
-        speed: 'velocidade'
+        speed: 'velocidade',
+        about: 'sobre'
     },
 
     en: {
@@ -14,6 +15,7 @@ export const routes = {
         area: 'area',
         volume: 'volume',
         mass: 'mass',
-        speed: 'speed'
+        speed: 'speed',
+        about: 'about'
     }
 }

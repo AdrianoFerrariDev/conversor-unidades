@@ -6,6 +6,7 @@ import Area from "../pages/Area";
 import Volume from "../pages/Volume";
 import Mass from "../pages/Mass";
 import Speed from "../pages/Speed";
+import About from "../pages/About";
 
 function PageRouter() {
     const { lang, slug } = useParams();
@@ -21,7 +22,8 @@ function PageRouter() {
         area: <Area />,
         volume: <Volume />,
         mass: <Mass />,
-        speed: <Speed />
+        speed: <Speed />,
+        about: <About />
     };
 
     return pages[key] || <Navigate to={`/${lang}`} />;
