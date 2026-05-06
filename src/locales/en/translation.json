@@ -1,5 +1,8 @@
 {
   "title": "Unit Converter",
+  "description": {
+    "home": ""
+  },
   "length": "Length",
   "area": "Area",
   "volume": "Volume",

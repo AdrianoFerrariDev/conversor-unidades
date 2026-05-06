@@ -3,6 +3,7 @@ import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/volume'
 import { useTranslation } from "react-i18next";
 import { setPageSEO } from "../utils/seo";
+import { setJSONLD } from "../utils/jsonld";
 
 
 function Volume() {
@@ -10,10 +11,19 @@ function Volume() {
 
     useEffect(() => {
         setPageSEO({
-            titles: `${t("area")} | ${t("title")}`,
-            description: t("area")
+            title: `${t("volume")} | ${t("title")}`,
+            description: t("description.volume"),
+            url: window.location.href,
+            image: "/preview.png"
         })
     }, [t])
+
+    setJSONLD({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: `${t("volume")}`,
+        url: window.location.origin
+    })
     
     return (
         <Converter 

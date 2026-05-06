@@ -3,16 +3,26 @@ import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/speed'
 import { useTranslation } from "react-i18next";
 import { setPageSEO } from "../utils/seo";
+import { setJSONLD } from "../utils/jsonld";
 
 function Speed() {
     const { t } = useTranslation()
 
     useEffect(() => {
         setPageSEO({
-            titles: `${t("area")} | ${t("title")}`,
-            description: t("area")
+            title: `${t("speed")} | ${t("title")}`,
+            description: t("description.speed"),
+            url: window.location.href,
+            image: "/preview.png"
         })
     }, [t])
+
+    setJSONLD({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: `${t("speed")}`,
+        url: window.location.origin
+    })
 
     return (
         <Converter 

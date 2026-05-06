@@ -10,6 +10,7 @@
 }
 
  :root {
+  /* Colors */
   --blue-primary: #4574c1;
   --blue-secondary: #406db4;
   --presentation-text: #ebebeb;
@@ -26,6 +27,10 @@
   --button: #42659e;
   --border: #b3bfcf;
   --border-focus: #4574c1;
+
+  /* spaces */
+  --space-default: 1rem;
+  --space-small : 0.5rem;
 }
 
 body.dark {
@@ -124,7 +129,7 @@ header {
 
 .menu-buttons {
   display: flex;
-  gap: 6px;
+  gap: var(--space-small);
   position: absolute;
   top: 10px;
   right: calc(100% + 3px);
@@ -207,6 +212,7 @@ header {
   flex: 1;
   margin: 0 auto;
   padding: 20px;
+  width: 100%;
 }
 
 p{
@@ -216,11 +222,11 @@ p{
 
 .breadcrumbs {
   font-size: 0.9rem;
-  margin-bottom: 16px;
+  margin-bottom: var(--space-default);
 }
 
 .breadcrumbs a {
-  color: var(--blue-primary);
+  color: var(--purple-primary);
   text-decoration: none;
 }
 
@@ -228,12 +234,8 @@ p{
   color: var(--text);
 }
 
-.converter {
-  margin-bottom: 1rem;
-}
-
-.converter-input {
-  margin-bottom: 1rem;
+.converter, .converter-input, .table-group {
+  margin-bottom: var(--space-default);
 }
 
 .converter-input input {
@@ -252,9 +254,9 @@ p{
 
 .converter-config {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--space-small);
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-default);
 }
 
 .converter-config select {
@@ -297,10 +299,6 @@ p{
   font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
-}
-
-.table-group {
-  margin-bottom: 1em;
 }
 
 .list-title {
@@ -357,7 +355,7 @@ footer {
 .popular {
   max-width: 900px;
   margin: 0 auto 2rem;
-  padding: 0 1rem;
+  padding: 0 var(--space-default);
 }
 
 .grid {
@@ -397,7 +395,6 @@ footer {
 @media screen and (min-width: 720px) {
   .container {
     max-width: 1200px;
-    width: 100%;
   }
 
   .menu {
@@ -425,19 +422,19 @@ footer {
 
   .nav-menu ul {
     display: flex;
-    gap: 15px
+    gap: var(--space-default);
   }
 
   .converter-row {
     display: grid;
     grid-template-columns: minmax(120px, 1fr) 2fr;
-    gap: 0.5rem;
+    gap: var(--space-small);
     width: 100%;
   }
 
   .list-convertions {
     display: grid;
-    gap: 1rem;
+    gap: var(--space-default);
     grid-template-columns: minmax(290px, 1fr) minmax(290px, 1fr);
     
   }

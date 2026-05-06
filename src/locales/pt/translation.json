@@ -1,5 +1,13 @@
 {
   "title": "Conversor de Unidades",
+  "description": {
+    "home": "Converta unidades rapidamente, selecione a unidade desejada e veja a conversão para várias outras.",
+    "length": "",
+    "area": "",
+    "volume": "",
+    "mass": "",
+    "speed": ""
+  },
   "length": "Comprimento",
   "area": "Área",
   "volume": "Volume",

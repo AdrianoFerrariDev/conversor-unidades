@@ -2,17 +2,29 @@ import { useEffect } from "react";
 import Converter from "../components/Converter"
 import { units, unitSystem } from '../converters/length'
 import { useTranslation } from "react-i18next";
-import { setPageSEO } from "../utils/seo";
+import { setHrefLangs, setPageSEO } from "../utils/seo";
+import { setJSONLD } from "../utils/jsonld";
 
 function Length() {
     const { t } = useTranslation()
 
     useEffect(() => {
         setPageSEO({
-            titles: `${t("area")} | ${t("title")}`,
-            description: t("area")
-        })
+            title: `${t("length")} | ${t("title")}`,
+            description: t("description.length"),
+            url: window.location.href,
+            image: "/preview.png"
+        });
+
+        setHrefLangs("length");
     }, [t])
+
+    setJSONLD({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: `${t("length")}`,
+        url: window.location.origin
+    })
 
     return (
         <Converter
