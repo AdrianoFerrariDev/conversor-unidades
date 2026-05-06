@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { setHrefLangs, setPageSEO } from "../utils/seo";
+import Breadcrumbs from "../components/Breadcrumb";
 
 function About() {
     const { t } = useTranslation();
@@ -25,7 +26,8 @@ function About() {
 
     return (
         <>
-        <h2>Sobre</h2>
+        <Breadcrumbs />
+        <h2>{t("about")}</h2>
         </>
     );
 }

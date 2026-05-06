@@ -2,16 +2,13 @@ import Converter from "../components/Converter"
 import { units, unitSystem } from '../converters/length'
 import { useTranslation } from "react-i18next";
 import { useSEO } from "../hooks/useSEO";
+import EducationalContent from "../components/EducationContent";
+import FAQ from "../components/FAQ";
 
 function Length() {
     const { t } = useTranslation()
 
-    useSEO({
-        title: t("length"),
-        description: t("description.length"),
-        routeKey: "length",
-        breadcrumbs: true,
-        faq: [
+    const faqs = [
             {
                 question: t("faq.length.q1"),
                 answer: t("faq.length.a1")
@@ -20,16 +17,35 @@ function Length() {
                 question: t("faq.length.q2"),
                 answer: t("faq.length.a2")
             }
-        ]
+        ];
+
+    useSEO({
+        title: t("length"),
+        description: t("description.length"),
+        routeKey: "length",
+        breadcrumbs: true,
+        faq: faqs
     });
 
     return (
+        <>
         <Converter
             title={t('pageTitle.lengthConv')}
             unitSystem={unitSystem}
             units={units}
         />
-        
+        <EducationalContent title={t("length_info_title")}>
+            <p>{t("length_info_1")}</p>
+            <p>{t("length_info_2")}</p>
+
+            <h3>{t("common_conversions")}</h3>
+            <ul>
+                <li>1 km = 1000 m</li>
+                <li>1 mi = 1.609 km</li>
+            </ul>
+        </EducationalContent>
+        <FAQ faqs={faqs} title={"afaq-title"} />
+        </>
     );
 }
 

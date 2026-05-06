@@ -1,5 +1,6 @@
 {
   "title": "Conversor de Unidades",
+  "home": "Início",
   "description": {
     "home": "Converta unidades rapidamente, selecione a unidade desejada e veja a conversão para várias outras.",
     "length": "a",
@@ -172,5 +173,11 @@
   "relevantUnits": {
     "lightspeed": "Velocidade da Luz",
     "soundspeed": "Velocidade do Som"
+  },
+  "faq": {
+    "length": {
+      "q1": "Pergunta 1",
+      "a1": "Resposta 1"
+    }
   }
 }
