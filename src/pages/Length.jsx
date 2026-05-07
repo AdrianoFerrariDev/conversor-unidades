@@ -4,20 +4,21 @@ import { useTranslation } from "react-i18next";
 import { useSEO } from "../hooks/useSEO";
 import EducationalContent from "../components/EducationContent";
 import FAQ from "../components/FAQ";
+import PageIntro from "../components/PageIntro";
 
 function Length() {
     const { t } = useTranslation()
 
     const faqs = [
-            {
-                question: t("faq.length.q1"),
-                answer: t("faq.length.a1")
-            },
-            {
-                question: t("faq.length.q2"),
-                answer: t("faq.length.a2")
-            }
-        ];
+        {
+            question: t("faq.length.q1"),
+            answer: t("faq.length.a1")
+        },
+        {
+            question: t("faq.length.q2"),
+            answer: t("faq.length.a2")
+        }
+    ];
 
     useSEO({
         title: t("length"),
@@ -29,8 +30,11 @@ function Length() {
 
     return (
         <>
+        <PageIntro 
+            title={t("length")}
+            text={t("pageIntro.length")}
+        />
         <Converter
-            title={t('pageTitle.lengthConv')}
             unitSystem={unitSystem}
             units={units}
         />

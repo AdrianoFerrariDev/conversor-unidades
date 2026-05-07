@@ -1,34 +1,30 @@
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/volume'
-import { useTranslation } from "react-i18next";
-import { setPageSEO } from "../utils/seo";
+import { useSEO } from "../hooks/useSEO";
+import PageIntro from "../components/PageIntro";
 
 function Volume() {
     const { t } = useTranslation()
 
-    useEffect(() => {
-        setPageSEO({
-            title: `${t("volume")} | ${t("title")}`,
-            description: t("description.volume"),
-            url: window.location.href,
-            image: "/preview.png"
-        })
-    }, [t])
-
-    /*setJSONLD({
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: `${t("volume")}`,
-        url: window.location.origin
-    })*/
+    useSEO({
+        title: t("volume"),
+        description: t("description.volume"),
+        routeKey: "volume",
+        breadcrumbs: true
+    })
     
     return (
+        <>
+        <PageIntro
+            title={t('volume')}
+            text={t('pageIntro.volume')}
+        />
         <Converter 
-            title={t('pageTitle.volumeConv')}
             unitSystem={unitSystem}
             units={units}
         />
+        </>
     );
 }
 

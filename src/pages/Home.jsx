@@ -1,33 +1,27 @@
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/length'
-import { useTranslation } from "react-i18next";
-import { setPageSEO } from "../utils/seo";
+import { useSEO } from "../hooks/useSEO";
+import PageIntro from "../components/PageIntro";
 
 function Home() {
   const { t } = useTranslation()
-
-  useEffect(() => {
-    setPageSEO({
-            title: `${t("title")}`,
-            description: t("description.home"),
-            url: window.location.href,
-            image: "/preview.png"
-        })
-  })
-
-  /*setJSONLD({
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: `${t("title")}`,
-    url: window.location.origin
-  })*/
+  
+  useSEO({
+    title: t("home"),
+    description: t("description.home"),
+    routeKey: "/",
+    breadcrumbs: false,
+  });
 
   return (
-    <div className="home">
-      {/* Quick Converter */}
+    <>
+      <PageIntro
+        breadcrumbs={false}
+        title={t("pageTitle.home")}
+        text={t("pageIntro.home")}
+      />
       <Converter 
-        title={t('pageTitle.lengthConv')}
         unitSystem={unitSystem}
         units={units}
         showTable={false}
@@ -58,7 +52,7 @@ function Home() {
         <h2>Sobre conversão</h2>
         <p>Este conversor permite transformar unidades de forma rápida e precisa. Ideal para estudantes, profissionais e uso cotidiano.</p>
       </section>
-    </div>
+    </>
   );
 }
 

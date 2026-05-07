@@ -11,11 +11,20 @@
   "speed": "Speed",
   "about": "About",
   "pageTitle": {
+    "home": "Convert units quickly",
     "lengthConv": "Lenght Converter",
     "areaConv": "Area Converter",
     "volumeConv": "Volume Converter",
     "massConv": "Mass Converter",
     "speedConv": "Speed Converter"
+  },
+  "pageIntro": {
+    "home": "O site é um Conversor online de unidades com o objetivo de fornecer conversões rápidas e precisas para diversos usos, seja profissional, educacional ou curiosidade. Para usar digite um número no campo abaixo e veja a conversão de metro para quilômetro. Navegue pelo menu e experimente outros conversores.",
+    "length": "Conversor de Comprimento",
+    "area": "Conversor de Área",
+    "volume": "Conversor de Volume",
+    "mass": "Conversor de Massa",
+    "speed": "Conversor de Velocidade"
   },
   "result": "Result",
   "value": "Value",

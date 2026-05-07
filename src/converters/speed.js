@@ -19,8 +19,8 @@ const speedSystem = {
     },
 
     relevants: { name: "relevants", units: {
-            luz: {factor: (299792458), symbol: '', name: 'relevantsUnits.lightspeed'},
-            som: {factor: (343.2), symbol: '', name: 'relevantsUnits.soundspeed'}
+            luz: {factor: (299792458), symbol: 'c', name: 'relevantUnits.lightspeed'},
+            som: {factor: (343.2), symbol: 'Ma', name: 'relevantUnits.soundspeed'}
         }
 
     }

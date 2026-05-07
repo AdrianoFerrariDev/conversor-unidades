@@ -2,9 +2,8 @@ import { useState } from "react";
 import { formatNumber } from "../utils/formatNumber";
 import { useTranslation } from "react-i18next";
 import { ArrowLeftRight } from "lucide-react";
-import Breadcrumbs from "./Breadcrumb";
 
-function Converter({ units, unitSystem, title, showTable=true }) {
+function Converter({ units, unitSystem, showTable=true }) {
     const unitKeys = Object.keys(units)
     const { t, i18n } = useTranslation()
 
@@ -30,8 +29,6 @@ function Converter({ units, unitSystem, title, showTable=true }) {
 
     return (
         <>
-            <Breadcrumbs />
-            <h2>{title}</h2>
             <section className="converter">
                 <div className="converter-row">
                     <div className="converter-input">

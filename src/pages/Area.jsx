@@ -1,34 +1,31 @@
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/area'
-import { useTranslation } from "react-i18next";
-import { setPageSEO } from "../utils/seo";
+import { useSEO } from "../hooks/useSEO";
+import PageIntro from "../components/PageIntro";
+
 
 function Area() {
     const { t } = useTranslation()
 
-    useEffect(() => {
-        setPageSEO({
-            title: `${t("area")} | ${t("title")}`,
-            description: t("description.area"),
-            url: window.location.href,
-            image: "/preview.png"
-        })
-    }, [t])
-
-    /*setJSONLD({
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: `${t("area")}`,
-        url: window.location.origin
-    })*/
+    useSEO({
+        title: t("area"),
+        description: t("description.area"),
+        routeKey: "area",
+        breadcrumbs: true,
+    })
     
     return (
+        <>
+        <PageIntro
+            title={t('area')}
+            text={t('pageIntro.area')}
+        />
         <Converter 
-            title={t('pageTitle.areaConv')}
             unitSystem={unitSystem}
             units={units}
         />
+        </>
     );
 }
 

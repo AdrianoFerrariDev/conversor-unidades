@@ -30,7 +30,7 @@ export function useSEO({ title, description, routeKey, breadcrumbs = false, faq 
             setBreadcrumbSchema({
                 lang,
                 items: [
-                    { name: "Home", path: ""},
+                    { name: t('home'), path: ""},
                     { name: title, path: `/${getSlug(lang, routeKey)}`}
                 ]
             });

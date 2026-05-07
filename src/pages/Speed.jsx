@@ -1,34 +1,30 @@
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/speed'
-import { useTranslation } from "react-i18next";
-import { setPageSEO } from "../utils/seo";
+import { useSEO } from "../hooks/useSEO";
+import PageIntro from "../components/PageIntro";
 
 function Speed() {
     const { t } = useTranslation()
 
-    useEffect(() => {
-        setPageSEO({
-            title: `${t("speed")} | ${t("title")}`,
-            description: t("description.speed"),
-            url: window.location.href,
-            image: "/preview.png"
-        })
-    }, [t])
-
-    /*setJSONLD({
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: `${t("speed")}`,
-        url: window.location.origin
-    })*/
+   useSEO({
+        title: t("speed"),
+        description: t("description.speed"),
+        routeKey: "speed",
+        breadcrumbs: true
+   })
 
     return (
-        <Converter 
-            title={t("pageTitle.speedConv")}
+        <>
+        <PageIntro
+            title={t('speed')}
+            text={t('pageIntro.speed')}
+        />
+        <Converter
             unitSystem={unitSystem}
             units={units}
         />
+        </>
     );
 }
 
