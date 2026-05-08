@@ -9,7 +9,7 @@ import PageIntro from "../components/PageIntro";
 function Length() {
     const { t } = useTranslation()
 
-    const faqs = [
+    /*const faqs = [
         {
             question: t("faq.length.q1"),
             answer: t("faq.length.a1")
@@ -18,14 +18,14 @@ function Length() {
             question: t("faq.length.q2"),
             answer: t("faq.length.a2")
         }
-    ];
+    ];*/
 
     useSEO({
         title: t("length"),
         description: t("description.length"),
         routeKey: "length",
         breadcrumbs: true,
-        faq: faqs
+        //faq: faqs
     });
 
     return (
@@ -48,7 +48,6 @@ function Length() {
                 <li>1 mi = 1.609 km</li>
             </ul>
         </EducationalContent>
-        <FAQ faqs={faqs} title={"afaq-title"} />
         </>
     );
 }
