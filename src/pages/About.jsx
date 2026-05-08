@@ -17,7 +17,7 @@ function About() {
         <Breadcrumbs />
         <h2>{t("about")}</h2>
         <section>
-            <p>Este projeto tem a finalidade de proporcionar uma ferramenta online de conversão de unidades para qualquer pessoa que necessite efetar conversões com agilidade.</p>
+            <p>Projeto pessoal para incluir em portfólio</p>
         </section>
         </>
     );

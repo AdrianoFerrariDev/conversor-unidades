@@ -52,7 +52,7 @@ function Home() {
       {/* Content */}
       <section className="content">
         <h2>Sobre conversão</h2>
-        <p>Este conversor permite transformar unidades de forma rápida e precisa. Ideal para estudantes, profissionais e uso cotidiano.</p>
+        <p>Conversor de unidades.</p>
       </section>
     </>
   );
