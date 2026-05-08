@@ -37,6 +37,8 @@ function Length() {
         <Converter
             unitSystem={unitSystem}
             units={units}
+            defaultFrom={0}
+            defaultTo={9}
         />
         <EducationalContent title={t("length_info_title")}>
             <p>{t("length_info_1")}</p>

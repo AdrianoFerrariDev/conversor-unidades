@@ -3,13 +3,13 @@ import { formatNumber } from "../utils/formatNumber";
 import { useTranslation } from "react-i18next";
 import { ArrowLeftRight } from "lucide-react";
 
-function Converter({ units, unitSystem, showTable=true }) {
+function Converter({ units, unitSystem,defaultFrom, defaultTo, showTable=true }) {
     const unitKeys = Object.keys(units)
     const { t, i18n } = useTranslation()
 
     const [value, setValue] = useState(1)
-    const [from, setFrom] = useState(unitKeys[0])
-    const [to, setTo] = useState(unitKeys[1])
+    const [from, setFrom] = useState(unitKeys[defaultFrom])
+    const [to, setTo] = useState(unitKeys[defaultTo])
 
     function convert(value, from, to) {
         const base = value * units[from].factor

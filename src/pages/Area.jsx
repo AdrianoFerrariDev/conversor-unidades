@@ -24,6 +24,8 @@ function Area() {
         <Converter 
             unitSystem={unitSystem}
             units={units}
+            defaultFrom={3}
+            defaultTo={6}
         />
         </>
     );

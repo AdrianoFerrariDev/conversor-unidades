@@ -23,6 +23,8 @@ function Mass() {
         <Converter
             unitSystem={unitSystem}
             units={units}
+            defaultFrom={1}
+            defaultTo={4}
         />
         </>        
     );

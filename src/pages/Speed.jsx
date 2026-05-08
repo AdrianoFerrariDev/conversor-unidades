@@ -23,6 +23,8 @@ function Speed() {
         <Converter
             unitSystem={unitSystem}
             units={units}
+            defaultFrom={3}
+            defaultTo={0}
         />
         </>
     );
