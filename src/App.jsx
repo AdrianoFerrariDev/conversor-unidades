@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import { getInitialLanguage } from "./utils/getInitialLaguage";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Home from "./pages/Home";
@@ -8,7 +9,7 @@ import LanguageSync from "./components/LanguageSync";
 import PageRouter from "./components/PageRouter";
 
 function App() {
-  const fallbackLang = localStorage.getItem("lang") || "pt"
+  const fallbackLang = getInitialLanguage();
 
   return (
     <BrowserRouter>
