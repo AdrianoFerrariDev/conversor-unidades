@@ -236,7 +236,7 @@ header {
   margin-bottom: var(--space-default);
 }
 
-.converter, .converter-input, .table-group {
+.converter, .converter-input, .table-group, .text-doc p, .text-doc ul {
   margin-bottom: var(--space-default);
 }
 

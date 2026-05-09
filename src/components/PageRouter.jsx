@@ -7,15 +7,20 @@ import Volume from "../pages/Volume";
 import Mass from "../pages/Mass";
 import Speed from "../pages/Speed";
 import About from "../pages/About";
+import Privacy from "../pages/Privacy";
+import Terms from "../pages/Terms";
+import NotFound from "../pages/NotFound";
+import { routes } from "../routes";
+
 
 function PageRouter() {
     const { lang, slug } = useParams();
 
-    const key = getKeyFromSlug(lang, slug);
+    //const key = getKeyFromSlug(lang, slug);
 
-    if(!key) {
+    /*if(!key) {
         return <Navigate to={`/${lang}`} />;
-    }
+    }*/
 
     const pages =  {
         length: <Length />,
@@ -23,10 +28,25 @@ function PageRouter() {
         volume: <Volume />,
         mass: <Mass />,
         speed: <Speed />,
-        about: <About />
+        about: <About />,
+        privacy: <Privacy />,
+        terms: <Terms />
     };
 
-    return pages[key] || <Navigate to={`/${lang}`} />;
+    const currentRoutes = routes[lang];
+
+    if (!currentRoutes) {
+        return <NotFound />
+    }
+
+    // procura qual chave bate com o slug traduzido
+    const routeKey = Object.keys(currentRoutes).find((key) => currentRoutes[key] === slug);
+
+    if(!routeKey) {
+        return <NotFound />
+    }
+
+    return pages[routeKey];
 }
 
 export default PageRouter;

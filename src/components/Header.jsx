@@ -7,6 +7,7 @@ import { useLanguageNavigation } from "../hooks/useLanguageNavigation";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { langList } from "../utils/langList";
 import { getSlug, translateSlug } from "../utils/routes";
+import { languages } from "../config/languages";
 
 function Header() {
     const { t } = useTranslation()
@@ -17,14 +18,14 @@ function Header() {
     const navigate = useNavigate()
     const location = useLocation()
 
-    // Idiomas permitidos
-    const supportedLangs = ["pt", "en"]
+    
+    const savedLang = localStorage.getItem('lang')
 
     // Fallback (localStorage -> default)
-    const fallbackLang = localStorage.getItem("lang") || "pt";
+    const fallbackLang = languages.includes(savedLang) ? savedLang : 'en';
 
     // Idioma final 
-    const lang = supportedLangs.includes(urlLang) ? urlLang : fallbackLang
+    const lang = languages.includes(urlLang) ? urlLang : fallbackLang
 
     const [theme, setTheme] = useState("light")
     const [openMenu, setOpenMenu] = useState(false)
@@ -98,11 +99,11 @@ function Header() {
                             <ul>
                                 <li><Link to={`/${lang}`}>Home</Link></li>
                                 <li><Link to={`/${lang}/${getSlug(lang, "length")}`}>{t('length')}</Link></li>
-                                <li><Link to={`/${lang}/${routes[lang].area}`}>{(t('area'))}</Link></li>
-                                <li><Link to={`/${lang}/${routes[lang].volume}`}>{t('volume')}</Link></li>
-                                <li><Link to={`/${lang}/${routes[lang].mass}`}>{t('mass')}</Link></li>
-                                <li><Link to={`/${lang}/${routes[lang].speed}`}>{t('speed')}</Link></li>
-                                <li><Link to={`/${lang}/${routes[lang].about}`}>{t('about')}</Link></li>
+                                <li><Link to={`/${lang}/${getSlug(lang, "area")}`}>{(t('area'))}</Link></li>
+                                <li><Link to={`/${lang}/${getSlug(lang, "volume")}`}>{t('volume')}</Link></li>
+                                <li><Link to={`/${lang}/${getSlug(lang, "mass")}`}>{t('mass')}</Link></li>
+                                <li><Link to={`/${lang}/${getSlug(lang, "speed")}`}>{t('speed')}</Link></li>
+                                <li><Link to={`/${lang}/${getSlug(lang, "about")}`}>{t('about')}</Link></li>
                             </ul>
                         </nav>
                         <div className="change-lang">

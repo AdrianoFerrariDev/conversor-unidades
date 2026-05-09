@@ -6,7 +6,10 @@ export const routes = {
         volume: 'volume',
         mass: 'massa',
         speed: 'velocidade',
-        about: 'sobre'
+        about: 'sobre',
+        privacy: 'privacidade',
+        terms: 'termos-de-uso',
+        notFound: 'pagina-nao-encontrada'  
     },
 
     en: {
@@ -16,6 +19,9 @@ export const routes = {
         volume: 'volume',
         mass: 'mass',
         speed: 'speed',
-        about: 'about'
+        about: 'about',
+        privacy: 'privacy',
+        terms: 'terms',
+        notFound: 'page-not-found'
     }
 }

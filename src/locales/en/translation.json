@@ -10,6 +10,9 @@
   "mass": "Mass",
   "speed": "Speed",
   "about": "About",
+  "privacy": "Privacy",
+  "terms": "Terms",
+  "notFound": "Page not found",
   "pageTitle": {
     "home": "Convert units quickly",
     "lengthConv": "Lenght Converter",

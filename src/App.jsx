@@ -2,11 +2,10 @@ import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 import LanguageSync from "./components/LanguageSync";
 import PageRouter from "./components/PageRouter";
-
-
 
 function App() {
   const fallbackLang = localStorage.getItem("lang") || "pt"
@@ -19,9 +18,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to={`/${fallbackLang}`} replace />} />
             <Route path="/:lang" element={<LanguageSync />}>
-              <Route path="" element={<Home />} />
+              <Route index element={<Home />} />
               <Route path=":slug" element={<PageRouter />} />
-              
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </main>

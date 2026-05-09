@@ -16,6 +16,9 @@
   "mass": "Massa",
   "speed": "Velocidade",
   "about": "Sobre",
+  "privacy": "Política de Privacidade",
+  "terms": "Termos de Uso",
+  "notFound": "Página não encontrada",
   "pageTitle": {
     "home": "Converta unidades rapidamente",
     "lengthConv": "Conversor de Comprimento",
