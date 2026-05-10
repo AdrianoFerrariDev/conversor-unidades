@@ -2,34 +2,23 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from '../i18n'
-import { routes } from "../routes";
-import { useLanguageNavigation } from "../hooks/useLanguageNavigation";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { langList } from "../utils/langList";
 import { getSlug, translateSlug } from "../utils/routes";
-import { languages } from "../config/languages";
+import { getInitialLanguage } from "../utils/getInitialLanguage";
 
 function Header() {
     const { t } = useTranslation()
-    /*const lang = ['pt', 'en'].includes(i18n.language?.slice(0, 2))
-        ? i18n.language.slice(0, 2)
-        : 'pt'*/
-    const {lang: urlLang} = useParams()
+    
     const navigate = useNavigate()
     const location = useLocation()
 
-    
-    const savedLang = localStorage.getItem('lang')
-
-    // Fallback (localStorage -> default)
-    const fallbackLang = languages.includes(savedLang) ? savedLang : 'en';
-
-    // Idioma final 
-    const lang = languages.includes(urlLang) ? urlLang : fallbackLang
+    // Pega idioma salvo em localStorage, senão usa a função getInitialLanguage
+    const lang = localStorage.getItem('lang') || getInitialLanguage()
 
     const [theme, setTheme] = useState("light")
     const [openMenu, setOpenMenu] = useState(false)
-    //const { changeLanguage } = useLanguageNavigation();
+
     const saved = localStorage.getItem("theme")
 
     // Sincroniza i18n + localStorage
@@ -50,16 +39,14 @@ function Header() {
 
     useEffect(() => {
         document.querySelector('.nav-menu').classList.toggle('open-menu')
+
+        // Impede scroll da tela quando o menu está aberto
+        document.body.style.overflow = openMenu ? "hidden" : "auto"
     },[openMenu])
 
     useEffect(() => {
         setOpenMenu(false)
     }, [location.pathname])
-
-    // Impede scroll da tela quando o menu está aberto
-    useEffect(() => {
-        document.body.style.overflow = openMenu ? "hidden" : "auto"
-    },[openMenu])
 
     function handleChangeLanguage(newLang) {
         const segments = location.pathname.split("/")
@@ -119,12 +106,6 @@ function Header() {
                             </select>
                         </div>
                     </div>
-                    {/* 
-                    <div className="lang-buttons">
-                        <button onClick={() => changeLanguage('pt')}>PT</button>
-                        <button onClick={() => changeLanguage('en')}>EN</button>
-                    </div>
-                    */}
             </div>
         </header>
     );

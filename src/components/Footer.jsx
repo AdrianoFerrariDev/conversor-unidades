@@ -1,20 +1,13 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { routes } from "../routes";
 import { getSlug } from "../utils/routes";
-import { languages } from "../config/languages";
+import { getInitialLanguage } from "../utils/getInitialLanguage";
 
 function Footer() {
     const { t } = useTranslation()
-    const {lang: urlLang} = useParams()
-
-    // Fallback (localStorage -> default)
-    const fallbackLang = localStorage.getItem("lang");
-
-    // Idioma final 
-    const lang = languages.includes(urlLang) ? urlLang : fallbackLang
-    console.log(fallbackLang)
     
+    // Pega idioma salvo em localStorage, senão usa a função getInitialLanguage
+    const lang = localStorage.getItem('lang') || getInitialLanguage()
 
     return (
         <footer>
