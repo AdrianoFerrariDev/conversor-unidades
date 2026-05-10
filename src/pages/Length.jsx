@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useSEO } from "../hooks/useSEO";
 import EducationalContent from "../components/EducationContent";
 import FAQ from "../components/FAQ";
-import PageIntro from "../components/PageIntro";
+import Breadcrumbs from "../components/Breadcrumb";
 
 function Length() {
     const { t } = useTranslation()
@@ -30,11 +30,10 @@ function Length() {
 
     return (
         <>
-        <PageIntro 
+        <Breadcrumbs />
+        <Converter
             title={t("length")}
             text={t("pageIntro.length")}
-        />
-        <Converter
             unitSystem={unitSystem}
             units={units}
             defaultFrom={0}

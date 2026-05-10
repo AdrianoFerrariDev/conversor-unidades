@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/volume'
 import { useSEO } from "../hooks/useSEO";
-import PageIntro from "../components/PageIntro";
+import Breadcrumbs from "../components/Breadcrumb";
 
 function Volume() {
     const { t } = useTranslation()
@@ -16,11 +16,10 @@ function Volume() {
     
     return (
         <>
-        <PageIntro
+        <Breadcrumbs />
+        <Converter
             title={t('volume')}
             text={t('pageIntro.volume')}
-        />
-        <Converter 
             unitSystem={unitSystem}
             units={units}
             defaultFrom={5}

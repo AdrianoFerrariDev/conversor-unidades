@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/mass'
 import { useSEO } from "../hooks/useSEO";
-import PageIntro from "../components/PageIntro";
+import Breadcrumbs from "../components/Breadcrumb";
 
 function Mass() {
     const { t } = useTranslation()
@@ -16,11 +16,10 @@ function Mass() {
 
     return(
         <>
-        <PageIntro
+        <Breadcrumbs />
+        <Converter
             title={t('mass')}
             text={t('pageIntro.mass')}
-        />
-        <Converter
             unitSystem={unitSystem}
             units={units}
             defaultFrom={1}

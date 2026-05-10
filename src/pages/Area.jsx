@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/area'
 import { useSEO } from "../hooks/useSEO";
-import PageIntro from "../components/PageIntro";
+import Breadcrumbs from "../components/Breadcrumb";
 
 
 function Area() {
@@ -17,11 +17,10 @@ function Area() {
     
     return (
         <>
-        <PageIntro
+        <Breadcrumbs />
+        <Converter 
             title={t('area')}
             text={t('pageIntro.area')}
-        />
-        <Converter 
             unitSystem={unitSystem}
             units={units}
             defaultFrom={3}

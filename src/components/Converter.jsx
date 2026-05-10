@@ -3,7 +3,7 @@ import { formatNumber } from "../utils/formatNumber";
 import { useTranslation } from "react-i18next";
 import { ArrowLeftRight } from "lucide-react";
 
-function Converter({ units, unitSystem,defaultFrom, defaultTo, showTable=true }) {
+function Converter({ title, text, units, unitSystem,defaultFrom, defaultTo, showTable=true }) {
     const unitKeys = Object.keys(units)
     const { t, i18n } = useTranslation()
 
@@ -30,6 +30,8 @@ function Converter({ units, unitSystem,defaultFrom, defaultTo, showTable=true })
     return (
         <>
             <section className="converter">
+                <h2>{title}</h2>
+                <p>{text}</p>
                 <div className="converter-row">
                     <div className="converter-input">
                         <input

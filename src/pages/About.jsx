@@ -15,8 +15,8 @@ function About() {
     return (
         <>
         <Breadcrumbs />
-        <h2>{t("about")}</h2>
         <section className="text-doc">
+            <h2>{t("about")}</h2>
             <p>O Conversor de Unidades é um projeto desenvolvido com foco em aprendizado, prática de desenvolvimento front-end moderno e demonstração de habilidades para portfólio profissional.</p>
 
             <p>A aplicação foi construída utilizando React, JavaScript e outras tecnologias modernas do ecossistema web, com foco em:</p>

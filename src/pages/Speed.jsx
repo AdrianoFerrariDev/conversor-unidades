@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/speed'
 import { useSEO } from "../hooks/useSEO";
-import PageIntro from "../components/PageIntro";
+import Breadcrumbs from "../components/Breadcrumb";
 
 function Speed() {
     const { t } = useTranslation()
@@ -16,11 +16,10 @@ function Speed() {
 
     return (
         <>
-        <PageIntro
+        <Breadcrumbs />
+        <Converter
             title={t('speed')}
             text={t('pageIntro.speed')}
-        />
-        <Converter
             unitSystem={unitSystem}
             units={units}
             defaultFrom={3}

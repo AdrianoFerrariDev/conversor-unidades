@@ -228,15 +228,11 @@ header {
   color: var(--text);
 }
 
-.page-intro h2 {
+.converter h2 {
   margin-bottom: var(--space-small);
 }
 
-.page-intro {
-  margin-bottom: var(--space-default);
-}
-
-.converter, .converter-input, .table-group, .text-doc p, .text-doc ul {
+.converter, .converter p, .converter-input, .table-group, .text-doc p, .text-doc ul {
   margin-bottom: var(--space-default);
 }
 
@@ -411,7 +407,6 @@ footer {
  /* HOME */
 .popular {
   margin-bottom: 2rem;
-  padding: 0 var(--space-default);
 }
 
 .grid {

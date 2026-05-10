@@ -1,8 +1,8 @@
 function Privacy() {
     return (
         <>
-            <h2>Política de Privacidade</h2>
             <section className="text-doc">
+                <h2>Política de Privacidade</h2>
                 <p>Este site foi desenvolvido como um projeto de portfólio com a finalidade de demonstrar habilidades em desenvolvimento web e oferecer ferramentas gratuitas de conversão de unidades.</p>
 
                 <h3>Coleta de dados</h3>

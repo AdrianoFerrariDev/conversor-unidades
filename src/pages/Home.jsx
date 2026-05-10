@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/length'
 import { useSEO } from "../hooks/useSEO";
-import PageIntro from "../components/PageIntro";
+import Breadcrumbs from "../components/Breadcrumb";
 
 function Home() {
   const { t } = useTranslation()
@@ -16,12 +16,9 @@ function Home() {
 
   return (
     <>
-      <PageIntro
-        breadcrumbs={false}
+      <Converter
         title={t("pageTitle.home")}
         text={t("pageIntro.home")}
-      />
-      <Converter 
         unitSystem={unitSystem}
         units={units}
         defaultFrom={3}
@@ -32,7 +29,7 @@ function Home() {
       <section className="popular">
         <h2>Conversores populares</h2>
         <div className="grid">
-          {["Comprimento", "Área", "Volume", "Massa", "Velocidade"].map((item) => (
+          {[t('length'), t('area'), t('volume'), t('mass'), t('speed')].map((item) => (
             <div key={item} className="card">
               {item}
             </div>
@@ -43,16 +40,11 @@ function Home() {
       <section className="quick">
         <h2>Conversões rápidas</h2>
         <ul>
-          <li>1 metro = 100 centímetros</li>
-          <li>1 km = 0.621 milhas</li>
-          <li> 1 litro = 0.264 galões (US)</li>
+          <li>1 m = 100 cm</li>
+          <li>1 in = 2,54 cm</li>
+          <li>1 mi = 1,609 km</li>
+          <li>1 gal (US) = 3,785 L</li>
         </ul>
-      </section>
-
-      {/* Content */}
-      <section className="content">
-        <h2>Sobre conversão</h2>
-        <p>Conversor de unidades.</p>
       </section>
     </>
   );

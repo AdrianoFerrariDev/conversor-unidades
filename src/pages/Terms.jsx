@@ -1,8 +1,8 @@
 function Terms() {
     return (
         <>
-            <h2>Termos de Uso</h2>
             <section className="text-doc">
+                <h2>Termos de Uso</h2>
                 <p>Ao acessar e utilizar este site, você concorda com os seguintes termos e condições.</p>
 
                 <h3>Uso da ferramenta</h3>
