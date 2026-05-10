@@ -394,10 +394,23 @@ footer {
   text-align: center;
 }
 
+.site-polices span{
+  display: inline-block;
+  padding: 6px 12px;
+}
+
+.site-polices a {
+  color: var(--presentation-text);
+  text-decoration: none;
+}
+
+.site-polices a:hover {
+  text-decoration: underline;
+}
+
  /* HOME */
 .popular {
-  max-width: 900px;
-  margin: 0 auto 2rem;
+  margin-bottom: 2rem;
   padding: 0 var(--space-default);
 }
 

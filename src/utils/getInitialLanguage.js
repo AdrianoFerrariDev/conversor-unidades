@@ -9,7 +9,7 @@ export function getInitialLanguage() {
     }
 
     // Idioma do navegador
-    const browserLang = navigator.language ?.toLowerCase().slice(0,2);
+    const browserLang = navigator.language?.toLowerCase().slice(0,2);
 
     // Português
     if (browserLang === 'pt') {
