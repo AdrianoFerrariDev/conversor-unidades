@@ -39,15 +39,15 @@ function Home() {
       { /* Quick List */}
       <section className="usual">
         <h2>Conversões comuns</h2>
-        <p>Abaixo você pode ver algumas conversões usuais de medidas de valor unitário para o seu correspondente.</p>
-        <ul>
-          <li>1 metro(m) = 100 centímetro(cm)</li>
-          <li>1 polegada(in) = 2,54 centímetros(cm)</li>
-          <li>1 milha(mi) = &asymp; 1,609 quilômetros(km)</li>
-          <li>1 galão Americano - gal (US) &asymp;  3,785 litros(L)</li>
-          <li>1 pé(ft) = 30,48 centímetros(cm)</li>
-          <li>1 quilograma (kg) = 1000 gramas(g)</li>
-          <li>1 metro/segundo (m/s) = 3,6 quilômetros/hora(km/h)</li>
+        <p>Abaixo, algumas conversões usuais de medidas de valor unitário para o seu correspondente.</p>
+        <ul class="conv-list">
+          <li><span class="usual-from">1 {t('meter')}(m)</span><span class="usual-eq">=</span><span class="usual-to">100 {t('centimeters')}(cm)</span></li>
+          <li><span class="usual-from">1 {t('inch')}(in)</span><span class="usual-eq">=</span><span class="usual-to">2,54 {t('centimeters')}(cm)</span></li>
+          <li><span class="usual-from">1 {t('mile')}(mi)</span><span class="usual-eq">&asymp;</span><span class="usual-to">1,609 {t('kilometers')}(km)</span></li>
+          <li><span class="usual-from">1 {t('gallon')}(US)(gal (US))</span><span class="usual-eq">&asymp;</span><span class="usual-to">3,785 {t('liters')}(L)</span></li>
+          <li><span class="usual-from">1 {t('foot')}(ft)</span><span class="usual-eq">=</span><span class="usual-to">30,48 {t('centimeters')}(cm)</span></li>
+          <li><span class="usual-from">1 {t('kilogram')}(kg)</span><span class="usual-eq">=</span><span class="usual-to">1000 {t('grams')}(g)</span></li>
+          <li><span class="usual-from">1 {t('metersecond')}(m/s)</span><span class="usual-eq">=</span><span class="usual-to">3,6 {t('kilometershour')}(km/h)</span></li>
         </ul>
       </section>
     </>

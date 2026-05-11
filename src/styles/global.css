@@ -30,13 +30,14 @@
 
   /* spaces */
   --space-default: 1rem;
+  --space-large: 2rem;
   --space-small : 0.5rem;
 }
 
 body.dark {
   --blue-primary: #213657;
   --blue-secondary: #1a2b45;
-  --contentbg: #1a1c1a;
+  --contentbg: #212421;
   --textcontent: #ebebeb;
   --purple-primary: #9883ff;
   --purple-secondary: #432883;
@@ -396,9 +397,46 @@ button svg {
   border-color: var(--primary);
 }
 
-.usual ul {
-  padding-left: 20px;
+.usual {
+  margin-bottom: 50px;
 }
+
+.conv-list {
+  border: 1px solid var(--border);
+  list-style: none;
+  margin: var(--space-large) auto;
+  padding-left: 0;
+  max-width: 700px;
+}
+
+.conv-list li {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.conv-list li:nth-child(odd) {
+  background-color: var(--purple-secondary);
+}
+
+.conv-list li:nth-child(even) {
+  background-color: var(--purple-tertiary);
+}
+
+.usual-from {
+  text-align: right;
+}
+
+.conv-list .usual-from, .conv-list .usual-to  {
+  flex: 1;
+}
+
+.usual-eq {
+  scale: 1.6 1.2;
+  text-align: center;
+  width: 30px;
+}
+
 
 footer {
   background: var(--blue-primary);
