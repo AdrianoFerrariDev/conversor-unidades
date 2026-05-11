@@ -37,13 +37,17 @@ function Home() {
         </div>
       </section>
       { /* Quick List */}
-      <section className="quick">
-        <h2>Conversões rápidas</h2>
+      <section className="usual">
+        <h2>Conversões comuns</h2>
+        <p>Abaixo você pode ver algumas conversões usuais de medidas de valor unitário para o seu correspondente.</p>
         <ul>
-          <li>1 m = 100 cm</li>
-          <li>1 in = 2,54 cm</li>
-          <li>1 mi = 1,609 km</li>
-          <li>1 gal (US) = 3,785 L</li>
+          <li>1 metro(m) = 100 centímetro(cm)</li>
+          <li>1 polegada(in) = 2,54 centímetros(cm)</li>
+          <li>1 milha(mi) = &asymp; 1,609 quilômetros(km)</li>
+          <li>1 galão Americano - gal (US) &asymp;  3,785 litros(L)</li>
+          <li>1 pé(ft) = 30,48 centímetros(cm)</li>
+          <li>1 quilograma (kg) = 1000 gramas(g)</li>
+          <li>1 metro/segundo (m/s) = 3,6 quilômetros/hora(km/h)</li>
         </ul>
       </section>
     </>
