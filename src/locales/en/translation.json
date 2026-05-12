@@ -25,6 +25,16 @@
   "grams": "grams",
   "kilometershour": "kilometers/hour",
   "metersecond": "meter/second",
+  "aria": {
+    "theme-mode": "Dark Mode/Ligth Mode",
+    "open-main-menu": "Open Menu",
+    "main-menu": "Main Menu",
+    "change-lang": "Change Language",
+    "input-convert-value": "Value to convert",
+    "unit-from": "Unit base",
+    "invert-units": "Invert units",
+    "unit-to": "Unit to convert"
+  },
   "pageTitle": {
     "home": "Convert units quickly",
     "lengthConv": "Lenght Converter",

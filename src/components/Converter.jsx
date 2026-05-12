@@ -35,6 +35,7 @@ function Converter({ title, text, units, unitSystem,defaultFrom, defaultTo, show
                 <div className="converter-row">
                     <div className="converter-input">
                         <input
+                            aria-label={t('aria.input-convert-value')}
                             type="number"
                             value={value}
                             autoFocus
@@ -42,7 +43,7 @@ function Converter({ title, text, units, unitSystem,defaultFrom, defaultTo, show
                         />
                     </div>
                     <div className="converter-config">
-                        <select name="unit-from" value={from} onChange={(e) => setFrom(e.target.value)}>
+                        <select aria-label={t('aria.unit-from')} name="unit-from" value={from} onChange={(e) => setFrom(e.target.value)}>
                             {Object.entries(unitSystem).map(([systemKey,system]) => (
                                 <optgroup key={systemKey} label={t(system.name)}>
                                     {Object.entries(system.units).map(([unitKey, unit]) => (
@@ -59,11 +60,11 @@ function Converter({ title, text, units, unitSystem,defaultFrom, defaultTo, show
                             setFrom(to)
                             setTo(from)
                         }}
-                            aria-label="Inverter unidades"
+                            aria-label={t('aria.invert-units')}
                         >
                             <ArrowLeftRight size={20} />
                         </button>
-                        <select name="unit-to" value={to} onChange={(e) => setTo(e.target.value)}>
+                        <select aria-label={t('aria.unit-to')} name="unit-to" value={to} onChange={(e) => setTo(e.target.value)}>
                             {Object.entries(unitSystem).map(([systemKey,system]) => (
                                 <optgroup key={systemKey} label={t(system.name)}>
                                     {Object.entries(system.units).map(([unitKey, unit]) => (

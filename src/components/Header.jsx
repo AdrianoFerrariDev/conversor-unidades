@@ -72,18 +72,20 @@ function Header() {
                             <div className="menu-buttons">
                                 <button
                                     className="theme-mode"
+                                    aria-label={t('aria.theme-mode')}
                                     onClick={() => setTheme(theme === 'light' ? "dark" : "light")}
                                 >
                                     {theme === "light" ? <Moon size={22} /> : <Sun size={22} />}
                                 </button>
                                 <button
                                     className="menu-button"
+                                    aria-label={t('aria.open-main-menu')}
                                     onClick={() => setOpenMenu(openMenu === true ? false : true)}
                                 >
                                     {openMenu === false ? <Menu size={22} /> : <X size={22} />}
                                 </button>
                             </div>
-                            <ul>
+                            <ul aria-label={t('main-menu')}>
                                 <li><Link to={`/${lang}`}>Home</Link></li>
                                 <li><Link to={`/${lang}/${getSlug(lang, "length")}`}>{t('length')}</Link></li>
                                 <li><Link to={`/${lang}/${getSlug(lang, "area")}`}>{(t('area'))}</Link></li>
@@ -95,6 +97,7 @@ function Header() {
                         </nav>
                         <div className="change-lang">
                             <select
+                                aria-label={t('aria.change-lang')}
                                 value={lang}
                                 name="site-lang"
                                 className="select-lang"
