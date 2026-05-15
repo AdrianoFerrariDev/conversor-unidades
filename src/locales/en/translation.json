@@ -25,6 +25,7 @@
   "grams": "grams",
   "kilometershour": "kilometers/hour",
   "metersecond": "meter/second",
+  "other-units": "Other Units",
   "aria": {
     "theme-mode": "Dark Mode/Ligth Mode",
     "open-main-menu": "Open Menu",

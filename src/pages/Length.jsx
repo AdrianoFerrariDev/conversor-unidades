@@ -40,7 +40,7 @@ function Length() {
             defaultTo={9}
         />
         <EducationalContent title={t("length_info_title")}>
-            <p>{t("length_info_1")}</p>
+            <p>{t("educational.length.info1")}</p>
             <p>{t("length_info_2")}</p>
 
             <h3>{t("common_conversions")}</h3>

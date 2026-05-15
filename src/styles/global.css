@@ -511,7 +511,7 @@ footer {
     width: 100%;
   }
 
-  .list-convertions {
+  .units-tables {
     display: grid;
     gap: var(--space-default);
     grid-template-columns: minmax(290px, 1fr) minmax(290px, 1fr);

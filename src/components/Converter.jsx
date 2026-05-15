@@ -81,40 +81,43 @@ function Converter({ title, text, units, unitSystem,defaultFrom, defaultTo, show
             </section>
             {showTable && (
             <section className="list-convertions">
-                {Object.entries(unitSystem).map(([systemKey, system]) => (
-                    <div key={systemKey} className="table-group">
-                        <h3 className={`list-title${units[to].system === systemKey ? ' active-system' : ''}`}>{t(unitSystem[systemKey].name)}</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>{t('value')}</td>
-                                    <td>{t('unity')}</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {Object.entries(system.units).map(([unitKey, unit]) => {
-                                        const converted = convert(Number(value),from, unitKey)
+                <h2>{t('other-units')}</h2>
+                <div className="units-tables">
+                    {Object.entries(unitSystem).map(([systemKey, system]) => (
+                        <div key={systemKey} className="table-group">
+                            <h3 className={`list-title${units[to].system === systemKey ? ' active-system' : ''}`}>{t(unitSystem[systemKey].name)}</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>{t('value')}</td>
+                                        <td>{t('unity')}</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {Object.entries(system.units).map(([unitKey, unit]) => {
+                                            const converted = convert(Number(value),from, unitKey)
 
-                                        return (
-                                            <tr
-                                                key={unitKey}
-                                                className={`table-row ${unitKey === to ? 'active-row' : ''} clickable`}
-                                                onClick={() => {
-                                                    if(unitKey !== to) setTo(unitKey)
-                                                }}
-                                            >
-                                                <td>
-                                                    {formatNumber(converted, i18n.language?.slice(0, 2))} {unit.symbol}
-                                                </td>
-                                                <td>{t(unit.name)}</td>
-                                            </tr>
-                                        )
-                                    })
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-                ))}
+                                            return (
+                                                <tr
+                                                    key={unitKey}
+                                                    className={`table-row ${unitKey === to ? 'active-row' : ''} clickable`}
+                                                    onClick={() => {
+                                                        if(unitKey !== to) setTo(unitKey)
+                                                    }}
+                                                >
+                                                    <td>
+                                                        {formatNumber(converted, i18n.language?.slice(0, 2))} {unit.symbol}
+                                                    </td>
+                                                    <td>{t(unit.name)}</td>
+                                                </tr>
+                                            )
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    ))}
+                </div>
             </section>
             )}
         </>

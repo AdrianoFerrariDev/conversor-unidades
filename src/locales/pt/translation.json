@@ -31,6 +31,7 @@
   "grams": "gramas",
   "kilometershour": "quilômetros/hora",
   "metersecond": "metro/segundo",
+  "other-units": "Outras Unidades",
   "aria": {
     "theme-mode": "Modo Escuro/Modo Claro",
     "open-main-menu": "Abrir Menu",
@@ -50,12 +51,12 @@
     "speedConv": "Conversor de Velocidade"
   },
   "pageIntro": {
-    "home": "Este é um projeto pessoal para ser incluído em portfólio.",
-    "length": "Conversor de Comprimento",
-    "area": "Conversor de Área",
-    "volume": "Conversor de Volume",
-    "mass": "Conversor de Massa",
-    "speed": "Conversor de Velocidade"
+    "home": "Conversor rápido de unidades desenvolvido como um projeto pessoal para ser incluído em portfólio. Digite um número em metros e veja sua conversão para centímetros. Selecione outras unidades nas caixas de seleção para obter seus valores correspondentes. No menu do site há conversores para outras tipo de unidades.",
+    "length": "Digite um número para ver sua conversão de metro para centímetros, e utilize as caixas de seleção para obter valores para outras unidades de comprimento",
+    "area": "Digite um número para ver sua conversão de metro quadrado para milímetros quadradros, e utilize as caixas de seleção para obter valores para outras unidades de área",
+    "volume": "Digite um número para ver sua conversão de litros para centímetros cúbicos, e utilize as caixas de seleção para obter valores para outras unidades de volume",
+    "mass": "Digite um número para ver sua conversão de quilograma para gramas, e utilize as caixas de seleção para obter valores para outras unidades de massa",
+    "speed": "Digite um número para ver sua conversão de metro por segundo para quilômetros por hora, e utilize as caixas de seleção para obter valores para outras unidades de velocidades"
   },
   "result": "Resultado",
   "value": "Valor",
@@ -212,6 +213,11 @@
     "length": {
       "q1": "Pergunta 1",
       "a1": "Resposta 1"
+    }
+  },
+  "educational": {
+    "length": {
+      "info1": "Unidades de comprimento são utilizadas para quantificar distâncias lineares, como altura, largura e comprimento, sendo o metro (m) a unidade padrão do Sistema Internacional (S.I)."
     }
   }
 }
