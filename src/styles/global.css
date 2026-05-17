@@ -238,7 +238,7 @@ main.container h2{
   margin-bottom: var(--space-small);
 }
 
-.converter, .converter p, .converter-input, .table-group, .text-doc p, .text-doc ul {
+.converter, .converter p, .converter-input, .table-group, .text-doc p, .text-doc ul, .content p {
   margin-bottom: var(--space-default);
 }
 

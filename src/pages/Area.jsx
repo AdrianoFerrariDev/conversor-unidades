@@ -3,6 +3,7 @@ import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/area'
 import { useSEO } from "../hooks/useSEO";
 import Breadcrumbs from "../components/Breadcrumb";
+import EducationalContent from "../components/EducationContent";
 
 
 function Area() {
@@ -26,6 +27,10 @@ function Area() {
             defaultFrom={3}
             defaultTo={6}
         />
+        <EducationalContent title={t("educational.area.title")}>
+            <p>{t('educational.area.info1')}</p>
+            <p>{t('educational.area.info2')}</p>
+        </EducationalContent>
         </>
     );
 }

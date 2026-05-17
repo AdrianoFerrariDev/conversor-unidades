@@ -39,15 +39,9 @@ function Length() {
             defaultFrom={0}
             defaultTo={9}
         />
-        <EducationalContent title={t("length_info_title")}>
+        <EducationalContent title={t("educational.length.title")}>
             <p>{t("educational.length.info1")}</p>
-            <p>{t("length_info_2")}</p>
-
-            <h3>{t("common_conversions")}</h3>
-            <ul>
-                <li>1 km = 1000 m</li>
-                <li>1 mi = 1.609 km</li>
-            </ul>
+            <p>{t("educational.length.info2")}</p>
         </EducationalContent>
         </>
     );

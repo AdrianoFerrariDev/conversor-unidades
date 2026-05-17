@@ -51,12 +51,12 @@
     "speedConv": "Conversor de Velocidade"
   },
   "pageIntro": {
-    "home": "Conversor rápido de unidades desenvolvido como um projeto pessoal para ser incluído em portfólio. Digite um número em metros e veja sua conversão para centímetros. Selecione outras unidades nas caixas de seleção para obter seus valores correspondentes. No menu do site há conversores para outras tipo de unidades.",
-    "length": "Digite um número para ver sua conversão de metro para centímetros, e utilize as caixas de seleção para obter valores para outras unidades de comprimento",
-    "area": "Digite um número para ver sua conversão de metro quadrado para milímetros quadradros, e utilize as caixas de seleção para obter valores para outras unidades de área",
-    "volume": "Digite um número para ver sua conversão de litros para centímetros cúbicos, e utilize as caixas de seleção para obter valores para outras unidades de volume",
-    "mass": "Digite um número para ver sua conversão de quilograma para gramas, e utilize as caixas de seleção para obter valores para outras unidades de massa",
-    "speed": "Digite um número para ver sua conversão de metro por segundo para quilômetros por hora, e utilize as caixas de seleção para obter valores para outras unidades de velocidades"
+    "home": "Conversor rápido de unidades desenvolvido com React como parte do meu portfólio profissional. Utilize o conversor abaixo para testar conversões de comprimento em tempo real e acesse pelo menu outras categorias, como área, volume, massa e velocidade.",
+    "length": "Converta rapidamente valores entre diferentes unidades de comprimento. Digite um número, escolha as unidades desejadas e veja os resultados atualizados automaticamente.",
+    "area": "Converta rapidamente valores entre diferentes unidades de área. Digite um número, selecione as unidades desejadas e veja os resultados atualizados automaticamente.",
+    "volume": "Converta rapidamente valores entre diferentes unidades de volume. Digite um número, escolha as unidades desejadas e veja os resultados atualizados automaticamente.",
+    "mass": "Converta rapidamente valores entre diferentes unidades de massa. Digite um número, escolha as unidades desejadas e veja os resultados atualizados automaticamente.",
+    "speed": "Converta rapidamente valores entre diferentes unidades de velocidade. Digite um número, escolha as unidades desejadas e veja os resultados atualizados automaticamente."
   },
   "result": "Resultado",
   "value": "Valor",
@@ -217,7 +217,29 @@
   },
   "educational": {
     "length": {
-      "info1": "Unidades de comprimento são utilizadas para quantificar distâncias lineares, como altura, largura e comprimento, sendo o metro (m) a unidade padrão do Sistema Internacional (S.I)."
+      "title": "Sobre Unidades de Comprimento",
+      "info1": "Unidades de comprimento são utilizadas para quantificar distâncias lineares, como altura, largura e comprimento e profundidade. Elas estão presentes em diversas áreas do cotidiano, incluindo construção civil, engenharia, arquitetura, transporte e atividades científicas.",
+      "info2": "No Sistema Internacional de Unidades (SI), a unidade padrão de comprimento é o metro (m). A partir dele são definidas outras unidades métricas, como quilômetro, centímetro e milímetro. Além do sistema métrico, alguns países também utilizam unidades do sistema imperial, como polegada, pé e milha."
+    },
+    "area": {
+      "title": "Sobre Unidades de Área",
+      "info1": "As unidades de área são utilizadas para medir superfícies e espaços bidimensionais, sendo muito comuns em construção, arquitetura, agricultura, design e engenharia. Elas representam o tamanho de uma superfície ocupada por um objeto ou região.",
+      "info2": "A unidade padrão de área no Sistema Internacional de Unidades (SI) é o metro quadrado (m²). Também são amplamente utilizadas outras unidades derivadas, como quilômetro quadrado, centímetro quadrado e hectare, além de unidades do sistema imperial, como acre e pé quadrado."
+    },
+    "volume" : {
+      "title": "Sobre Unidades de Volume",
+      "info1": "As unidades de volume são utilizadas para medir o espaço ocupado por líquidos, sólidos e gases. Essas medidas são amplamente utilizadas em áreas como culinária, química, física, engenharia, transporte e armazenamento.",
+      "info2": "No Sistema Internacional de Unidades (SI), a unidade padrão de volume é o metro cúbico (m³). Também são muito utilizadas unidades como litro, mililitro e centímetro cúbico, além de unidades dos sistemas imperial e americano, como galão, quart e onça fluida."
+    },
+    "mass": {
+      "title": "Sobre Unidades de Massa",
+      "info1": "As unidades de massa são utilizadas para quantificar a quantidade de matéria de um corpo ou objeto. Essas medidas estão presentes no cotidiano e em áreas como ciência, comércio, indústria, culinária e transporte.",
+      "info2": "A unidade padrão de massa no Sistema Internacional de Unidades (SI) é o quilograma (kg). Também são utilizadas outras unidades métricas, como grama, tonelada e miligrama, além de unidades do sistema imperial, como libra e onça."
+    },
+    "speed": {
+      "title": "Sobre Unidades de Velocidade",
+      "info1": "As unidades de velocidade são utilizadas para medir a variação de distância ao longo do tempo. Elas são fundamentais em áreas como transporte, física, engenharia, meteorologia e aviação.",
+      "info2": "No Sistema Internacional de Unidades (SI), a velocidade é representada em metros por segundo (m/s). No entanto, outras unidades são amplamente utilizadas no cotidiano, como quilômetros por hora (km/h), milhas por hora (mph) e nós."
     }
   }
 }

@@ -3,6 +3,7 @@ import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/mass'
 import { useSEO } from "../hooks/useSEO";
 import Breadcrumbs from "../components/Breadcrumb";
+import EducationalContent from "../components/EducationContent";
 
 function Mass() {
     const { t } = useTranslation()
@@ -25,6 +26,10 @@ function Mass() {
             defaultFrom={1}
             defaultTo={4}
         />
+        <EducationalContent title={t("educational.mass.title")}>
+            <p>{t("educational.mass.info1")}</p>
+            <p>{t("educational.mass.info2")}</p>
+        </EducationalContent>
         </>        
     );
 }

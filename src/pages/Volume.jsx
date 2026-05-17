@@ -3,6 +3,7 @@ import Converter from "../components/Converter";
 import { units, unitSystem } from '../converters/volume'
 import { useSEO } from "../hooks/useSEO";
 import Breadcrumbs from "../components/Breadcrumb";
+import EducationalContent from "../components/EducationContent";
 
 function Volume() {
     const { t } = useTranslation()
@@ -25,6 +26,10 @@ function Volume() {
             defaultFrom={5}
             defaultTo={3}
         />
+        <EducationalContent title={t("educational.volume.title")}>
+            <p>{t("educational.volume.info1")}</p>
+            <p>{t("educational.volume.info2")}</p>
+        </EducationalContent>
         </>
     );
 }
